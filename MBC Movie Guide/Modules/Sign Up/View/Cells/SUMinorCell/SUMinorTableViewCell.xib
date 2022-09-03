@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Almarai-Regular.ttf">
+            <string>Almarai-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SUMinorTableViewCell" rowHeight="87" id="KGk-i7-Jjw" customClass="SUMinorTableViewCell" customModule="MBC_Movie_Guide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Q2C-sO-5YW">
+                        <rect key="frame" x="23" y="24.5" width="131" height="38"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="Tlm-ko-oFs"/>
+                        </constraints>
+                        <color key="textColor" name="#veryLightPink"/>
+                        <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEh-hw-udP">
+                        <rect key="frame" x="23" y="62.5" width="19.5" height="9"/>
+                        <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="8"/>
+                        <color key="textColor" name="#dustyRed"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpn-UA-JIc">
+                        <rect key="frame" x="174" y="62.5" width="19.5" height="9"/>
+                        <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="8"/>
+                        <color key="textColor" name="#dustyRed"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2s-h0-tly">
+                        <rect key="frame" x="34" y="18.5" width="35" height="11.5"/>
+                        <color key="backgroundColor" name="#cellLblColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="IQY-Gb-kPg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                        <color key="textColor" name="#brownishGreyTwo"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="3mK-zb-2br">
+                        <rect key="frame" x="32" y="22" width="169" height="43"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="vy0-60-Dzk">
+                                <rect key="frame" x="0.0" y="0.0" width="169" height="17"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRf-yl-TT6">
+                                        <rect key="frame" x="0.0" y="0.0" width="17" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="PXc-l8-KKu"/>
+                                            <constraint firstAttribute="width" constant="17" id="mVq-ao-TJW"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="circleBttn"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79X-fV-DGh">
+                                        <rect key="frame" x="24" y="0.0" width="145" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="145" id="G2b-mg-KwM"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="termsBttn"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="q6l-J2-Yiy">
+                                <rect key="frame" x="0.0" y="26" width="154" height="17"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-eH-f74">
+                                        <rect key="frame" x="0.0" y="0.0" width="17" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="17" id="Do4-IC-aPQ"/>
+                                            <constraint firstAttribute="height" constant="17" id="jqE-Lx-Og8"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="circleBttn"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I would like to recieve ads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xY3-Vw-Lgt">
+                                        <rect key="frame" x="24" y="0.0" width="130" height="17"/>
+                                        <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="12"/>
+                                        <color key="textColor" name="#white"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="RcE-y4-ibS">
+                        <rect key="frame" x="174" y="24.5" width="131" height="38"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="YnP-dV-HFl"/>
+                        </constraints>
+                        <color key="textColor" name="#veryLightPink"/>
+                        <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="mlG-C9-ajx">
+                        <rect key="frame" x="67.5" y="0.0" width="193" height="28"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="26g-DX-p6z">
+                                <rect key="frame" x="0.0" y="0.0" width="193" height="11.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By logging in I accept the" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhl-0y-peC">
+                                        <rect key="frame" x="0.0" y="0.0" width="122.5" height="11.5"/>
+                                        <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="10"/>
+                                        <color key="textColor" name="#veryLightPink"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpS-R3-Ybr">
+                                        <rect key="frame" x="122.5" y="0.0" width="70.5" height="11.5"/>
+                                        <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="10"/>
+                                        <color key="tintColor" name="#darkSkyBlue"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Privacy Policy"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4T-Zg-6mk">
+                                <rect key="frame" x="0.0" y="13.5" width="193" height="14.5"/>
+                                <fontDescription key="fontDescription" name="Almarai-Regular" family="Almarai" pointSize="10"/>
+                                <color key="tintColor" name="#darkSkyBlue"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="&amp; Terms &amp; Conditions"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="2DG-gk-YSF"/>
+                            <constraint firstAttribute="width" constant="193" id="ShR-Qi-jzI"/>
+                        </constraints>
+                    </stackView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKp-4r-4D6">
+                        <rect key="frame" x="185" y="18.5" width="35" height="11.5"/>
+                        <color key="backgroundColor" name="#cellLblColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="939-CF-4kY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                        <color key="textColor" name="#brownishGreyTwo"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3mK-zb-2br" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2fH-is-2vW"/>
+                    <constraint firstItem="RcE-y4-ibS" firstAttribute="leading" secondItem="kKp-4r-4D6" secondAttribute="leading" constant="-11" id="4W1-2z-wMZ"/>
+                    <constraint firstItem="YEh-hw-udP" firstAttribute="top" secondItem="Q2C-sO-5YW" secondAttribute="bottom" id="ALQ-RY-DBD"/>
+                    <constraint firstItem="Q2C-sO-5YW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="23" id="HrA-Kp-10k"/>
+                    <constraint firstItem="3mK-zb-2br" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="JYi-uw-Ggj"/>
+                    <constraint firstItem="mlG-C9-ajx" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="JyX-mJ-Yiy"/>
+                    <constraint firstItem="Q2C-sO-5YW" firstAttribute="leading" secondItem="YEh-hw-udP" secondAttribute="leading" id="K7Q-AP-eom"/>
+                    <constraint firstItem="Q2C-sO-5YW" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="LEv-eE-ZKh"/>
+                    <constraint firstItem="Q2C-sO-5YW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NhW-yj-d0O"/>
+                    <constraint firstAttribute="trailing" secondItem="RcE-y4-ibS" secondAttribute="trailing" constant="23" id="QDW-GL-g5f"/>
+                    <constraint firstItem="Q2C-sO-5YW" firstAttribute="baseline" secondItem="J2s-h0-tly" secondAttribute="firstBaseline" constant="21" id="V3f-1n-vZP"/>
+                    <constraint firstItem="hpn-UA-JIc" firstAttribute="top" secondItem="RcE-y4-ibS" secondAttribute="bottom" id="Y6M-Hq-hME"/>
+                    <constraint firstItem="RcE-y4-ibS" firstAttribute="leading" secondItem="hpn-UA-JIc" secondAttribute="leading" id="cNH-2T-LJe"/>
+                    <constraint firstItem="Q2C-sO-5YW" firstAttribute="leading" secondItem="J2s-h0-tly" secondAttribute="leading" constant="-11" id="cPM-ob-miT"/>
+                    <constraint firstItem="RcE-y4-ibS" firstAttribute="baseline" secondItem="kKp-4r-4D6" secondAttribute="firstBaseline" constant="21" id="jIR-Y7-ovi"/>
+                    <constraint firstItem="RcE-y4-ibS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oqI-2R-YOv"/>
+                    <constraint firstItem="RcE-y4-ibS" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="w1K-Ah-6wT"/>
+                    <constraint firstItem="mlG-C9-ajx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zcy-Jz-eSl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="acceptTermsButton" destination="79X-fV-DGh" id="s9z-by-frQ"/>
+                <outlet property="adsCheck" destination="d5G-eH-f74" id="kNx-TR-vFG"/>
+                <outlet property="cLastNameErrorLabel" destination="hpn-UA-JIc" id="IOy-2R-ZJ4"/>
+                <outlet property="cLastNameLabel" destination="kKp-4r-4D6" id="xwp-hi-BvI"/>
+                <outlet property="cLastNameTextField" destination="RcE-y4-ibS" id="YPn-jp-qUQ"/>
+                <outlet property="cNameErrorLabel" destination="YEh-hw-udP" id="HUO-8D-mi6"/>
+                <outlet property="cNameLabel" destination="J2s-h0-tly" id="huH-c0-WMJ"/>
+                <outlet property="cNameTextField" destination="Q2C-sO-5YW" id="YAO-G1-2B5"/>
+                <outlet property="privacyPolicyButton" destination="jpS-R3-Ybr" id="DDH-2x-gMZ"/>
+                <outlet property="recieveAdsLabel" destination="xY3-Vw-Lgt" id="EhD-zz-acB"/>
+                <outlet property="termsAndConditionsButton" destination="w4T-Zg-6mk" id="NGx-5p-gwT"/>
+                <outlet property="termsCheck" destination="wRf-yl-TT6" id="Fn2-os-zWf"/>
+                <outlet property="termsLabel" destination="Yhl-0y-peC" id="hIh-6y-xsE"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="123.54910714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circleBttn" width="17" height="17"/>
+        <image name="termsBttn" width="143" height="12"/>
+        <namedColor name="#brownishGreyTwo">
+            <color red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#cellLblColor">
+            <color red="0.027450980392156862" green="0.082352941176470587" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#darkSkyBlue">
+            <color red="0.34509803921568627" green="0.5607843137254902" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#dustyRed">
+            <color red="0.85098039215686272" green="0.16470588235294117" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#veryLightPink">
+            <color red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

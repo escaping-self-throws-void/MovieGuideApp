@@ -1,0 +1,69 @@
+/* 
+  Localizable.strings
+  MBC Movie Guide
+
+  Created by Paul Matar on 07/07/2022.
+  
+*/
+
+"Skip" = "يتخطى";
+"Sign Up" = "اشتراك";
+"Already have an account?" = "هل لديك حساب؟";
+"Log in here" = "سجل الدخول هنا";
+"OR" = "أو";
+"  First Name  " = "  الاسم الاول  ";
+"  Last Name  " = "  الكنية  ";
+"  Email  " = "  البريد الإلكتروني  ";
+"  Password  " = "  كلمة المرور  ";
+"  Confirm Password  " = "  تأكيد كلمة المرور  ";
+
+"First Name" = "الاسم الأول";
+"Last Name" = "اسم العائلة";
+"Email" = "بريد إلكتروني";
+"Password" = "كلمة المرور";
+"Confirm Password" = "تأكيد كلمة المرور";
+
+"Birthday (Optional)" = "عيد ميلاد (اختياري)";
+"Gender (Optional)" = "الجنس (اختياري)";
+"Country (Optional)" = "البلد (اختياري)";
+"Sign Up" = "اشتراك";
+"Login" = "تسجيل الدخول";
+"Forgot?" = "نسيت؟";
+
+"Wrong name format" = "تنسيق اسم خاطئ";
+"Wrong lastname format" = "تنسيق اسم العائلة خاطئ";
+"Not valid email format" = "تنسيق بريد إلكتروني غير صالح";
+"Atleast one letter, one special character with the length of 8 digits" = "حرف واحد على الأقل ، حرف خاص واحد بطول 8 أرقام";
+"Password does not match" = "كلمة السر غير متطابقة";
+
+"Timeline" = "الجدول الزمني";
+"NOW" = "حاليا";
+
+"Guest" = "زائر";
+"Genres" = "الأنواع";
+"Watchlist" = "قائمة المراقبة";
+"Quiz" = "اختبار";
+"Logout" = "تسجيل الخروج";
+"Login" = "تسجيل الخروج";
+
+"Add to Watchlist" = "أضافة إلى قائمة المشاهدة";
+"Chatroom" = "غرفة الدردشة";
+"Cast" = "يقذف";
+"Directors" = "المدراء";
+"Genres" = "الأنواع";
+
+"Watch Now" = "شاهد الآن";
+"Set Reminder" = "تعيين تذكير";
+"Share Movie Via..." = "...مشاركة الفيلم عبر";
+
+"Settings" = "إعدادات";
+"Language" = "لغة";
+"Notifications" = "إشعارات";
+"24-Hour Time" = "توقيت 24 ساعة";
+"Privacy Policy" = "سياسة الخصوصية";
+
+"Successfully added to your calendar" = "تمت الإضافة إلى التقويم الخاص بك بنجاح";
+"The event was not added" = "لم تتم إضافة الحدث";
+"Reminder was set 30 mins before movie starts!" = "تم ضبط التذكير قبل 30 دقيقة من بدء الفيلم!";
+"Please try again" = "حاول مرة اخرى";
+"OK" = "نعم";

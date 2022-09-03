@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "GPA-pX-vbq"; */
+"GPA-pX-vbq.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "GuC-Ki-njf"; */
+"GuC-Ki-njf.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Skip"; ObjectID = "YtS-UQ-xpa"; */
+"YtS-UQ-xpa.configuration.title" = "Skip";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "YtS-UQ-xpa"; */
+"YtS-UQ-xpa.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "OR"; ObjectID = "gh4-wy-HI3"; */
+"gh4-wy-HI3.text" = "OR";
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "hCu-9Z-hVK"; */
+"hCu-9Z-hVK.configuration.title" = "Sign Up";
+
+/* Class = "UILabel"; text = "Already have an account?"; ObjectID = "hYn-JO-PXx"; */
+"hYn-JO-PXx.text" = "Already have an account?";
+
+/* Class = "UIButton"; configuration.title = "Log in here"; ObjectID = "umk-7a-cnw"; */
+"umk-7a-cnw.configuration.title" = "Log in here";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "umk-7a-cnw"; */
+"umk-7a-cnw.normalTitle" = "Button";
