@@ -12,7 +12,7 @@ MBC Movie Guide clone with english and arabic localizations. Browse upcoming mov
 * _
 * _
 
-![](SignUpLogin.gif)
+![SignUpLogin](https://user-images.githubusercontent.com/24648375/188487992-63b5c06e-a9b5-4eb7-8498-c85bd46b3c54.gif)
 
 ### Timeline Screen
 * _
