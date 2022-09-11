@@ -31,7 +31,10 @@ final class TimelineViewModel: TimelineViewModelProtocol {
     var indexPathsForAvailableNow: [IndexPath] = []
     
     var changed = BehaviorSubject<Bool>(value: false)
-    var selectedDate = BehaviorSubject<Date>(value: Date())
+    
+    // Adjustment for Mock data
+    var selectedDate = BehaviorSubject<Date>(value: "2022-09-11T15:00:00.000Z".getDate)
+//    var selectedDate = BehaviorSubject<Date>(value: Date())
     
     var selectedRow: Int = 0
     
@@ -94,7 +97,12 @@ final class TimelineViewModel: TimelineViewModelProtocol {
         let locAdjustment = LanguageService.shared.isEn ? 1 : 0
         
         movieData.forEach { md in
-            if let row = md.movies.firstIndex(where: { $0.date.getDate.isAvailableNow }),
+            // Adjustment for mock data
+            if let row = md.movies.firstIndex(where: {
+                $0.date == "2022-09-11T15:00:00.000Z" ||
+                $0.date ==  "2022-09-11T16:00:00.000Z"
+            }),
+//            if let row = md.movies.firstIndex(where: { $0.date.getDate.isAvailableNow }),
             let section = movieData.firstIndex(where: { $0.id == md.id }) {
                 let indexPath = IndexPath(row: row + locAdjustment, section: section)
                 indexPaths.append(indexPath)

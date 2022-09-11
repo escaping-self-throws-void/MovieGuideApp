@@ -51,7 +51,10 @@ final class TimelineViewController: UIViewController {
         setupBlur()
         setupUI()
         bind()
-        viewModel.getMovieData(from: Date())
+        // Adjustment for mock data
+        let mockDate = "2022-09-11T15:00:00.000Z".getDate
+        viewModel.getMovieData(from: mockDate)
+//        viewModel.getMovieData(from: Date())
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -201,7 +204,12 @@ extension TimelineViewController {
             
             let vc = PopUpViewController()
             vc.delegate = self
-            vc.dates = self.viewModel.createDays(8, from: Date())
+            
+            // Adjustment for Mock data
+            let mockDate = "2022-09-11T15:00:00.000Z".getDate
+            vc.dates = self.viewModel.createDays(8, from: mockDate)
+            
+//            vc.dates = self.viewModel.createDays(8, from: Date())
             vc.selectedRow = self.viewModel.selectedRow
             
             self.present(vc, animated: true)

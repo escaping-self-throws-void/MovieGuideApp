@@ -1,0 +1,250 @@
+[
+  {
+    "_id": "25",
+    "movies": [
+      {
+        "_id": "631930e12da9c48f17fa81c6",
+        "channel": "25",
+        "date": "2022-09-15T23:00:00.000Z",
+        "movieId": "6250cd7d2da9c48f175b0aea",
+        "movieRelease": "2018-06-15T00:00:00.000Z",
+        "duration": "92 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNzk4NDM3NjkwNF5BMl5BanBnXkFtZTgwNTk5MzkzNTM@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Tag",
+        "titleAr": "تاج"
+      },
+      {
+        "_id": "631bd3de2da9c48f17facf6d",
+        "channel": "25",
+        "date": "2022-09-16T06:30:00.000Z",
+        "movieId": "61ec9b39c8bbcdbbd07639d4",
+        "movieRelease": "2016-09-30T00:00:00.000Z",
+        "duration": "94 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BOTEzNDU0OTgxM15BMl5BanBnXkFtZTgwNjA0ODM2OTE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Deepwater Horizon",
+        "titleAr": "ديبواتر هورايزن"
+      },
+      {
+        "_id": "631bd3e12da9c48f17facfb5",
+        "channel": "25",
+        "date": "2022-09-16T08:30:00.000Z",
+        "movieId": "61f72748c8bbcdbbd0822d81",
+        "movieRelease": "2013-01-04T00:00:00.000Z",
+        "duration": "98 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjA5NTA3NzQ5Nl5BMl5BanBnXkFtZTcwOTYxNjY0OA@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "The Impossible",
+        "titleAr": "ذي إمبوسيبل"
+      },
+      {
+        "_id": "631bd3d62da9c48f17face7b",
+        "channel": "25",
+        "date": "2022-09-16T11:00:00.000Z",
+        "movieId": "62f2f57a2da9c48f17dcff02",
+        "movieRelease": "2015-09-25T00:00:00.000Z",
+        "duration": "110 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTNmMzM0ZTktZWY3Yy00ODViLTllZDgtODcwM2QyM2E2YTU2L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Everest",
+        "titleAr": "إفرست"
+      },
+      {
+        "_id": "631bd3da2da9c48f17facefd",
+        "channel": "25",
+        "date": "2022-09-16T13:30:00.000Z",
+        "movieId": "631bd3da2da9c48f17facefb",
+        "movieRelease": "2001-03-30T00:00:00.000Z",
+        "duration": "79 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BY2JhODU1NmQtNjllYS00ZmQwLWEwZjYtMTE5NjA1M2YyMzdjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Spy Kids",
+        "titleAr": "الجواسيس الصغار"
+      },
+      {
+        "_id": "631bd3da2da9c48f17faceee",
+        "channel": "25",
+        "date": "2022-09-16T15:00:00.000Z",
+        "movieId": "61f08fe1c8bbcdbbd07a4378",
+        "movieRelease": "2003-07-25T00:00:00.000Z",
+        "duration": "75 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTI4MTQyNTUzMF5BMl5BanBnXkFtZTcwNzE2MDAwMQ@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Spy Kids 3: Game Over",
+        "titleAr": "الجواسيس الصغار 3: إنتهاء اللعبة"
+      },
+      {
+        "_id": "631bd3d42da9c48f17face4c",
+        "channel": "25",
+        "date": "2022-09-16T16:30:00.000Z",
+        "movieId": "625f4e202da9c48f1763f2a1",
+        "movieRelease": "2017-07-21T00:00:00.000Z",
+        "duration": "124 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTkxMDAxNDUyNV5BMl5BanBnXkFtZTgwOTc3MzcxMjI@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Valerian And The City Of A Thousand Planets",
+        "titleAr": "فاليريان آند ذا سيتي أوف ثاوزاندز بلانيتس"
+      },
+      {
+        "_id": "631bd3df2da9c48f17facf8c",
+        "channel": "25",
+        "date": "2022-09-16T18:35:00.000Z",
+        "movieId": "631bd3df2da9c48f17facf8a",
+        "duration": "30 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579440967-entertainment-tonight-profile.jpg",
+        "active": true,
+        "titleEn": "Entertainment Tonight (42): Ep 9",
+        "titleAr": "إنترتاينمنت تونايت"
+      },
+      {
+        "_id": "631bd3d52da9c48f17face5f",
+        "channel": "25",
+        "date": "2022-09-16T19:00:00.000Z",
+        "movieId": "61fc6d49c8bbcdbbd088751c",
+        "movieRelease": "2019-04-05T00:00:00.000Z",
+        "duration": "121 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BOWZhZjE4NGQtODg5Ni00MjQ1LWJmMzAtNzQ2N2M1NzYzMDJkXkEyXkFqcGdeQXVyMjMwNDgzNjc@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Shazam!",
+        "titleAr": "شازام!"
+      },
+      {
+        "_id": "631bd3d62da9c48f17face75",
+        "channel": "25",
+        "date": "2022-09-16T21:30:00.000Z",
+        "movieId": "62439e4e2da9c48f1751b5c5",
+        "movieRelease": "2015-07-24T00:00:00.000Z",
+        "duration": "94 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTIzNDYzMzgtZWMzNS00ODc2LTg2ZmMtOTE2MWZkNzIxMmQ0XkEyXkFqcGdeQXVyNjQ3MDg0MTY@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Pixels",
+        "titleAr": "بكسلز"
+      }
+    ]
+  },
+  {
+    "_id": "10",
+    "movies": [
+      {
+        "_id": "631930dc2da9c48f17fa8143",
+        "channel": "10",
+        "date": "2022-09-15T22:00:00.000Z",
+        "movieId": "62ba457b2da9c48f17abdd47",
+        "movieRelease": "2007-12-25T00:00:00.000Z",
+        "duration": "84 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTI5NDY2NDUwM15BMl5BanBnXkFtZTYwNzQxMTA3._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "AVPR: Aliens Vs. Predator - Requiem",
+        "titleAr": "AVPR: آلينز فيرسيس بريداتور - ريكويم"
+      },
+      {
+        "_id": "631930db2da9c48f17fa813a",
+        "channel": "10",
+        "date": "2022-09-15T23:30:00.000Z",
+        "movieId": "62196e30c8bbcdbbd0ac98da",
+        "movieRelease": "2019-07-12T00:00:00.000Z",
+        "duration": "86 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BOGE1ZjFhYzAtYWM4ZC00NGI1LWFmYzMtZWRhZDhjMjE4YzBjXkEyXkFqcGdeQXVyODQzNTE3ODc@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Stuber",
+        "titleAr": "ستوبر"
+      },
+      {
+        "_id": "631bd3e22da9c48f17facfec",
+        "channel": "10",
+        "date": "2022-09-16T06:30:00.000Z",
+        "movieId": "61d78353c8bbcdbbd05e46f4",
+        "movieRelease": "2014-05-23T00:00:00.000Z",
+        "duration": "106 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNzc2ODI5NjAyMl5BMl5BanBnXkFtZTgwMzIyOTE4MDE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Blended",
+        "titleAr": "بلينديد"
+      },
+      {
+        "_id": "631bd3d72da9c48f17face90",
+        "channel": "10",
+        "date": "2022-09-16T09:00:00.000Z",
+        "movieId": "61f48449c8bbcdbbd07f3bd8",
+        "movieRelease": "2000-10-06T00:00:00.000Z",
+        "duration": "97 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMGNlMGZiMmUtZjU0NC00MWU4LWI0YTgtYzdlNGVhZGU4NWZlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Meet The Parents",
+        "titleAr": "ميت ذا بيرنتس"
+      },
+      {
+        "_id": "631bd3e32da9c48f17fad000",
+        "channel": "10",
+        "date": "2022-09-16T11:30:00.000Z",
+        "movieId": "62f052622da9c48f17dada37",
+        "movieRelease": "2011-03-04T00:00:00.000Z",
+        "duration": "96 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTc4NjEyODE1OV5BMl5BanBnXkFtZTcwMjYzNTkxNA@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Rango",
+        "titleAr": "رانجو"
+      },
+      {
+        "_id": "631bd3e12da9c48f17facfbe",
+        "channel": "10",
+        "date": "2022-09-16T13:30:00.000Z",
+        "movieId": "631bd3df2da9c48f17facf8a",
+        "duration": "30 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579440967-entertainment-tonight-profile.jpg",
+        "active": true,
+        "titleEn": "Entertainment Tonight (42): Ep 9",
+        "titleAr": "إنترتاينمنت تونايت"
+      },
+      {
+        "_id": "631bd3dc2da9c48f17facf31",
+        "channel": "10",
+        "date": "2022-09-16T14:00:00.000Z",
+        "movieId": "631bd3dc2da9c48f17facf2f",
+        "movieRelease": "2005-06-24T00:00:00.000Z",
+        "duration": "93 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNmNmYzJhODQtZWEyMS00NzUyLWFmYTAtZjYzMDNlNWU3NzVjXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Bewitched",
+        "titleAr": "بيوتشد"
+      },
+      {
+        "_id": "631bd3d92da9c48f17facecf",
+        "channel": "10",
+        "date": "2022-09-16T16:00:00.000Z",
+        "movieId": "6237c0c92da9c48f17487377",
+        "movieRelease": "2019-10-11T00:00:00.000Z",
+        "duration": "79 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BODBjOTAzZmMtNGJkOC00M2M3LWI1MTctZjZlMzdiODBkMzc0XkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "The Addams Family",
+        "titleAr": "ذا آدمز فاميلي"
+      },
+      {
+        "_id": "631bd3dd2da9c48f17facf44",
+        "channel": "10",
+        "date": "2022-09-16T18:00:00.000Z",
+        "movieId": "61d23d54c8bbcdbbd0559b65",
+        "movieRelease": "2018-11-16T00:00:00.000Z",
+        "duration": "121 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BYWVlMDI5N2UtZTIyMC00NjZkLWI5Y2QtODM5NGE5MzA0NmVjXkEyXkFqcGdeQXVyNzU3NjUxMzE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Fantastic Beasts: The Crimes Of Grindelwald",
+        "titleAr": "فانتاستك بيستس: ذا كرايمز أوف جريندلوالد"
+      },
+      {
+        "_id": "631bd3d92da9c48f17faced4",
+        "channel": "10",
+        "date": "2022-09-16T20:30:00.000Z",
+        "movieId": "61d23d4ac8bbcdbbd0559a78",
+        "movieRelease": "2015-04-03T00:00:00.000Z",
+        "duration": "104 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTk4MDM3MTc4OF5BMl5BanBnXkFtZTgwMTUxNDM3NDE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Last Knights",
+        "titleAr": "لاست نايتس"
+      }
+    ]
+  }
+]

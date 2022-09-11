@@ -11,7 +11,7 @@ final class TimelineCoordinator: BaseCoordinator {
         
     override func start() {
         let viewController = TimelineViewController.instantiate()
-        let viewModel = TimelineViewModel(service: APIFetcher())
+        let viewModel = TimelineViewModel(service: MockFetcher())
         viewModel.coordinator = self
         viewController.viewModel = viewModel
         navigationController.isNavigationBarHidden = false

@@ -1,0 +1,369 @@
+[
+  {
+    "_id": "25",
+    "movies": [
+      {
+        "_id": "6317df702da9c48f17fa5aa8",
+        "channel": "25",
+        "date": "2022-09-12T23:05:00.000Z",
+        "movieId": "6317df6c2da9c48f17fa5a43",
+        "duration": "25 min",
+        "active": true,
+        "titleEn": "A-List Lifestyle (2): Ep 37",
+        "titleAr": "إيه-ليست لايفستايل"
+      },
+      {
+        "_id": "631bd3e42da9c48f17fad018",
+        "channel": "25",
+        "date": "2022-09-12T23:10:00.000Z",
+        "movieId": "6317df6c2da9c48f17fa5a43",
+        "duration": "25 min",
+        "active": true,
+        "titleEn": "A-List Lifestyle (2): Ep 37",
+        "titleAr": "إيه-ليست لايفستايل"
+      },
+      {
+        "_id": "63153c5d2da9c48f17f8fd0f",
+        "channel": "25",
+        "date": "2022-09-12T23:30:00.000Z",
+        "movieId": "624792ca2da9c48f1754c94e",
+        "movieRelease": "2010-12-17T00:00:00.000Z",
+        "duration": "118 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTM0ODk3MjM1MV5BMl5BanBnXkFtZTcwNzc1MDIwNA@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "The Fighter",
+        "titleAr": "ذا فايتر"
+      },
+      {
+        "_id": "631bd3df2da9c48f17facf7c",
+        "channel": "25",
+        "date": "2022-09-12T23:35:00.000Z",
+        "movieId": "624792ca2da9c48f1754c94e",
+        "movieRelease": "2010-12-17T00:00:00.000Z",
+        "duration": "118 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTM0ODk3MjM1MV5BMl5BanBnXkFtZTcwNzc1MDIwNA@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "The Fighter",
+        "titleAr": "ذا فايتر"
+      },
+      {
+        "_id": "63168de32da9c48f17fa109d",
+        "channel": "25",
+        "date": "2022-09-13T06:30:00.000Z",
+        "movieId": "61d23d51c8bbcdbbd0559a9e",
+        "movieRelease": "2014-10-09T00:00:00.000Z",
+        "duration": "103 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNDM5MDIxNzYyNV5BMl5BanBnXkFtZTgwMDUzMTk4MTE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Kill The Messenger",
+        "titleAr": "كيل ذا ماسنجر"
+      },
+      {
+        "_id": "63168dde2da9c48f17fa102b",
+        "channel": "25",
+        "date": "2022-09-13T08:30:00.000Z",
+        "movieId": "63153c552da9c48f17f8fc14",
+        "movieRelease": "2007-08-24T00:00:00.000Z",
+        "duration": "96 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNTIwMjE2Mjc1MF5BMl5BanBnXkFtZTYwNzI0OTI3._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "War",
+        "titleAr": "وور"
+      },
+      {
+        "_id": "63168de02da9c48f17fa106b",
+        "channel": "25",
+        "date": "2022-09-13T10:30:00.000Z",
+        "movieId": "626c7d262da9c48f176bc829",
+        "movieRelease": "2012-08-10T00:00:00.000Z",
+        "duration": "122 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTc4Njk3MDM1Nl5BMl5BanBnXkFtZTcwODgyOTMxOA@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "The Bourne Legacy",
+        "titleAr": "ذا بورن ليجاسي"
+      },
+      {
+        "_id": "63168de62da9c48f17fa1103",
+        "channel": "25",
+        "date": "2022-09-13T12:30:00.000Z",
+        "movieId": "6313eade2da9c48f17f7feae",
+        "duration": "37 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1580128950-7741-poster.jpg",
+        "active": true,
+        "titleEn": "Scoop With Raya (2022): Ep 37",
+        "titleAr": "سكووب مع ريا"
+      },
+      {
+        "_id": "63168ddc2da9c48f17fa0fd6",
+        "channel": "25",
+        "date": "2022-09-13T13:00:00.000Z",
+        "movieId": "623d06c62da9c48f174ca30e",
+        "movieRelease": "2008-02-14T00:00:00.000Z",
+        "duration": "81 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjEwOTkyOTI3M15BMl5BanBnXkFtZTcwNTQxMjU1MQ@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Jumper",
+        "titleAr": "جمبر"
+      },
+      {
+        "_id": "63168dde2da9c48f17fa1037",
+        "channel": "25",
+        "date": "2022-09-13T14:30:00.000Z",
+        "movieId": "6292b83e2da9c48f1788c052",
+        "movieRelease": "2013-07-19T00:00:00.000Z",
+        "duration": "88 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTM5OTYxNzE5N15BMl5BanBnXkFtZTcwMDU1MTQ4OQ@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "R.I.P.D.",
+        "titleAr": ".R.I.P.D"
+      },
+      {
+        "_id": "6317df702da9c48f17fa5aa3",
+        "channel": "25",
+        "date": "2022-09-13T16:00:00.000Z",
+        "movieId": "6317df702da9c48f17fa5aa1",
+        "duration": "25 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579440994-hollywood-buzz.jpg",
+        "active": true,
+        "titleEn": "Hollywood Buzz (5): Ep 39",
+        "titleAr": "هوليوود باز"
+      },
+      {
+        "_id": "63168ddf2da9c48f17fa1045",
+        "channel": "25",
+        "date": "2022-09-13T16:30:00.000Z",
+        "movieId": "623d06c52da9c48f174ca2da",
+        "movieRelease": "2013-11-01T00:00:00.000Z",
+        "duration": "107 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjAzMzI5OTgzMl5BMl5BanBnXkFtZTgwMTU5MTAwMDE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Ender's Game",
+        "titleAr": "إنديرز جايم"
+      },
+      {
+        "_id": "63168de42da9c48f17fa10be",
+        "channel": "25",
+        "date": "2022-09-13T18:30:00.000Z",
+        "movieId": "63168dd42da9c48f17fa0f47",
+        "duration": "18 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579440967-entertainment-tonight-profile.jpg",
+        "active": true,
+        "titleEn": "Entertainment Tonight (42): Ep 6",
+        "titleAr": "إنترتاينمنت تونايت"
+      },
+      {
+        "_id": "63168dda2da9c48f17fa0fab",
+        "channel": "25",
+        "date": "2022-09-13T19:00:00.000Z",
+        "movieId": "61dcc967c8bbcdbbd064ca1d",
+        "movieRelease": "2017-02-03T00:00:00.000Z",
+        "duration": "111 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNjYzODU1OTkwN15BMl5BanBnXkFtZTgwMDA3MTMwMDI@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "The Space Between Us",
+        "titleAr": "ذا سبيس بيتوين أس"
+      },
+      {
+        "_id": "63168dd72da9c48f17fa0f54",
+        "channel": "25",
+        "date": "2022-09-13T21:00:00.000Z",
+        "movieId": "622a91ef2da9c48f173c7037",
+        "movieRelease": "2014-08-15T00:00:00.000Z",
+        "duration": "89 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTY1MTIxMjg2Ml5BMl5BanBnXkFtZTgwMjUyNzgwMjE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "The Giver",
+        "titleAr": "ذا جيفر"
+      }
+    ]
+  },
+  {
+    "_id": "10",
+    "movies": [
+      {
+        "_id": "63153c612da9c48f17f8fd6b",
+        "channel": "10",
+        "date": "2022-09-12T22:00:00.000Z",
+        "movieId": "630d537d2da9c48f17f2d933",
+        "duration": "30 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1580647983-celebrity-scoop.jpg",
+        "active": true,
+        "titleEn": "Celebrity Scoop (5): Ep 36",
+        "titleAr": "سيليبريتي سكوب"
+      },
+      {
+        "_id": "63168de52da9c48f17fa10ed",
+        "channel": "10",
+        "date": "2022-09-12T22:05:00.000Z",
+        "movieId": "630d537d2da9c48f17f2d933",
+        "duration": "30 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1580647983-celebrity-scoop.jpg",
+        "active": true,
+        "titleEn": "Celebrity Scoop (5): Ep 36",
+        "titleAr": "سيليبريتي سكوب"
+      },
+      {
+        "_id": "631bd3dc2da9c48f17facf21",
+        "channel": "10",
+        "date": "2022-09-12T22:20:00.000Z",
+        "movieId": "6216cb3dc8bbcdbbd0a92381",
+        "movieRelease": "2016-02-26T00:00:00.000Z",
+        "duration": "113 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjQyMjg2NDk0MV5BMl5BanBnXkFtZTgwNzU5Njc5NjE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Triple 9",
+        "titleAr": "تريبل 9"
+      },
+      {
+        "_id": "63153c592da9c48f17f8fc83",
+        "channel": "10",
+        "date": "2022-09-12T22:30:00.000Z",
+        "movieId": "6216cb3dc8bbcdbbd0a92381",
+        "movieRelease": "2016-02-26T00:00:00.000Z",
+        "duration": "113 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjQyMjg2NDk0MV5BMl5BanBnXkFtZTgwNzU5Njc5NjE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Triple 9",
+        "titleAr": "تريبل 9"
+      },
+      {
+        "_id": "63168dd82da9c48f17fa0f7b",
+        "channel": "10",
+        "date": "2022-09-13T06:30:00.000Z",
+        "movieId": "62e3235c2da9c48f17cfd3ca",
+        "movieRelease": "1994-07-06T00:00:00.000Z",
+        "duration": "144 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Forrest Gump",
+        "titleAr": "فورست جامب"
+      },
+      {
+        "_id": "63168dde2da9c48f17fa103a",
+        "channel": "10",
+        "date": "2022-09-13T09:00:00.000Z",
+        "movieId": "61d23d55c8bbcdbbd0559bde",
+        "movieRelease": "2010-08-27T00:00:00.000Z",
+        "duration": "103 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTg4ODg5NzkzNl5BMl5BanBnXkFtZTcwNzAyODM5Mw@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Takers",
+        "titleAr": "تيكرز"
+      },
+      {
+        "_id": "63168de42da9c48f17fa10e1",
+        "channel": "10",
+        "date": "2022-09-13T11:00:00.000Z",
+        "movieId": "62e717c72da9c48f17d342cd",
+        "movieRelease": "1981-08-28T00:00:00.000Z",
+        "duration": "103 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNjQ2MDg4ZDUtNTA0Ny00Nzc3LWFmM2UtY2I0YWRjNjZkMTg0XkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Gallipoli",
+        "titleAr": "جاليبولي"
+      },
+      {
+        "_id": "63168dd42da9c48f17fa0f49",
+        "channel": "10",
+        "date": "2022-09-13T13:00:00.000Z",
+        "movieId": "63168dd42da9c48f17fa0f47",
+        "duration": "18 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579440967-entertainment-tonight-profile.jpg",
+        "active": true,
+        "titleEn": "Entertainment Tonight (42): Ep 6",
+        "titleAr": "إنترتاينمنت تونايت"
+      },
+      {
+        "_id": "63168dd82da9c48f17fa0f6a",
+        "channel": "10",
+        "date": "2022-09-13T13:30:00.000Z",
+        "movieId": "61e4b239c8bbcdbbd06de0b6",
+        "movieRelease": "2017-03-04T00:00:00.000Z",
+        "duration": "85 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BZmI4OGE0MTktOTQ3ZC00ZDlhLTg1OGMtMjRiMTMwNzgzZDIyXkEyXkFqcGdeQXVyNjc4Nzk3NzU@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Security",
+        "titleAr": "سكيورتي"
+      },
+      {
+        "_id": "63168de62da9c48f17fa110f",
+        "channel": "10",
+        "date": "2022-09-13T15:05:00.000Z",
+        "movieId": "63153c5c2da9c48f17f8fcee",
+        "duration": "25 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579441062-films-&-stars-poster.jpg",
+        "active": true,
+        "titleEn": "Films & Stars (5): Ep 38",
+        "titleAr": "فيلمز & ستارز"
+      },
+      {
+        "_id": "63168dd92da9c48f17fa0f8a",
+        "channel": "10",
+        "date": "2022-09-13T15:30:00.000Z",
+        "movieId": "624792d12da9c48f1754ca46",
+        "movieRelease": "2011-09-16T00:00:00.000Z",
+        "duration": "89 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BZjY5ZjQyMjMtMmEwOC00Nzc2LTllYTItMmU2MzJjNTg1NjY0XkEyXkFqcGdeQXVyNjQ1MTMzMDQ@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Drive",
+        "titleAr": "درايف"
+      },
+      {
+        "_id": "63168de62da9c48f17fa1122",
+        "channel": "10",
+        "date": "2022-09-13T17:00:00.000Z",
+        "movieId": "63153c5f2da9c48f17f8fd33",
+        "duration": "29 min",
+        "active": true,
+        "titleEn": "Making The Movies (2): Ep 38",
+        "titleAr": "ميكينج ذا موفيز"
+      },
+      {
+        "_id": "63168ddd2da9c48f17fa1010",
+        "channel": "10",
+        "date": "2022-09-13T17:30:00.000Z",
+        "movieId": "621033c6c8bbcdbbd0a19f82",
+        "movieRelease": "2014-03-14T00:00:00.000Z",
+        "duration": "120 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTQ3ODY4NzYzOF5BMl5BanBnXkFtZTgwNjI3OTE4MDE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Need For Speed",
+        "titleAr": "نيد فور سبيد"
+      },
+      {
+        "_id": "63168de52da9c48f17fa10ea",
+        "channel": "10",
+        "date": "2022-09-13T19:35:00.000Z",
+        "movieId": "63168de52da9c48f17fa10e8",
+        "duration": "25 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579441021-action-zone-profile.jpg",
+        "active": true,
+        "titleEn": "Action Zone (5): Ep 37",
+        "titleAr": "أكشن زون"
+      },
+      {
+        "_id": "63168dd82da9c48f17fa0f67",
+        "channel": "10",
+        "date": "2022-09-13T20:00:00.000Z",
+        "movieId": "62439e512da9c48f1751b626",
+        "movieRelease": "2012-10-05T00:00:00.000Z",
+        "duration": "83 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTkwNTQ0ODExOV5BMl5BanBnXkFtZTcwNjU3NDQwOA@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Taken 2",
+        "titleAr": "تيكن 2"
+      },
+      {
+        "_id": "63168de72da9c48f17fa1131",
+        "channel": "10",
+        "date": "2022-09-13T21:35:00.000Z",
+        "movieId": "63168de72da9c48f17fa112f",
+        "duration": "25 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1580647983-celebrity-scoop.jpg",
+        "active": true,
+        "titleEn": "Celebrity Scoop (5): Ep 37",
+        "titleAr": "سيليبريتي سكوب"
+      }
+    ]
+  }
+]

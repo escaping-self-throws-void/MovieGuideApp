@@ -1,0 +1,226 @@
+[
+  {
+    "_id": "25",
+    "movies": [
+      {
+        "_id": "631bd3e02da9c48f17facfa5",
+        "channel": "25",
+        "date": "2022-09-17T23:00:00.000Z",
+        "movieId": "625f4e202da9c48f1763f2a1",
+        "movieRelease": "2017-07-21T00:00:00.000Z",
+        "duration": "124 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTkxMDAxNDUyNV5BMl5BanBnXkFtZTgwOTc3MzcxMjI@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Valerian And The City Of A Thousand Planets",
+        "titleAr": "فاليريان آند ذا سيتي أوف ثاوزاندز بلانيتس"
+      },
+      {
+        "_id": "631d255f2da9c48f17faf689",
+        "channel": "25",
+        "date": "2022-09-18T06:30:00.000Z",
+        "movieId": "61d23d51c8bbcdbbd0559aa6",
+        "movieRelease": "2014-12-25T00:00:00.000Z",
+        "duration": "95 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjA2ODM5MDE3N15BMl5BanBnXkFtZTgwOTIxNjc1MzE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Big Eyes",
+        "titleAr": "بيج آيز"
+      },
+      {
+        "_id": "631d25572da9c48f17faf5b4",
+        "channel": "25",
+        "date": "2022-09-18T08:30:00.000Z",
+        "movieId": "62142840c8bbcdbbd0a65793",
+        "movieRelease": "2012-09-28T00:00:00.000Z",
+        "duration": "112 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTg2NzUyMzYxOF5BMl5BanBnXkFtZTcwOTc4NzY5Nw@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Won't Back Down",
+        "titleAr": "ونت باك داون"
+      },
+      {
+        "_id": "631d25592da9c48f17faf5f1",
+        "channel": "25",
+        "date": "2022-09-18T11:00:00.000Z",
+        "movieId": "61de1ae7c8bbcdbbd06637fe",
+        "movieRelease": "2015-04-24T00:00:00.000Z",
+        "duration": "100 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTAzMTQzMTA2MjheQTJeQWpwZ15BbWU4MDk2MTg2MzUx._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "The Age Of Adaline",
+        "titleAr": "ذي إيدج أوف أدلاين"
+      },
+      {
+        "_id": "631d255f2da9c48f17faf697",
+        "channel": "25",
+        "date": "2022-09-18T13:00:00.000Z",
+        "movieId": "6271c2f82da9c48f176fb1ff",
+        "movieRelease": "2014-02-28T00:00:00.000Z",
+        "duration": "96 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BOTI3NzcxMjkzMl5BMl5BanBnXkFtZTgwMDY0NTQ0MDE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Non-Stop",
+        "titleAr": "نون-ستوب"
+      },
+      {
+        "_id": "631d25572da9c48f17faf5aa",
+        "channel": "25",
+        "date": "2022-09-18T15:00:00.000Z",
+        "movieId": "620d90d9c8bbcdbbd09e5ae5",
+        "movieRelease": "2013-11-27T00:00:00.000Z",
+        "duration": "91 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTUwOTAzNzAwMl5BMl5BanBnXkFtZTgwOTc1NDIyMDE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Homefront",
+        "titleAr": "هومفرونت"
+      },
+      {
+        "_id": "631d25572da9c48f17faf5c1",
+        "channel": "25",
+        "date": "2022-09-18T17:00:00.000Z",
+        "movieId": "61fb1bc8c8bbcdbbd086ebbd",
+        "movieRelease": "2015-08-21T00:00:00.000Z",
+        "duration": "88 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjc2ODU1YWYtOGU1MS00ODQ3LTg1YmUtYmRmNjZmNzNiMjA4XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Hitman: Agent 47",
+        "titleAr": "هتمان: إيجنت 47"
+      },
+      {
+        "_id": "631d255d2da9c48f17faf658",
+        "channel": "25",
+        "date": "2022-09-18T19:00:00.000Z",
+        "movieId": "624641422da9c48f1753c136",
+        "movieRelease": "2013-03-22T00:00:00.000Z",
+        "duration": "106 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNTU0NmY4MWYtNzRlMS00MDkxLWJkODYtOTM3NGI2ZDc1NTJhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Olympus Has Fallen",
+        "titleAr": "أوليمبس هاز فولين"
+      },
+      {
+        "_id": "631d25592da9c48f17faf5f6",
+        "channel": "25",
+        "date": "2022-09-18T21:00:00.000Z",
+        "movieId": "624641302da9c48f1753c0de",
+        "movieRelease": "2016-03-04T00:00:00.000Z",
+        "duration": "88 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTY1ODY2MTgwM15BMl5BanBnXkFtZTgwOTY3Nzc3NzE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "London Has Fallen",
+        "titleAr": "لندن هاز فولين"
+      }
+    ]
+  },
+  {
+    "_id": "10",
+    "movies": [
+      {
+        "_id": "631bd3d52da9c48f17face4f",
+        "channel": "10",
+        "date": "2022-09-17T22:30:00.000Z",
+        "movieId": "61d23d53c8bbcdbbd0559b1c",
+        "movieRelease": "2018-10-05T00:00:00.000Z",
+        "duration": "124 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNmE5ZmE3OGItNTdlNC00YmMxLWEzNjctYzAwOGQ5ODg0OTI0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "A Star Is Born",
+        "titleAr": "إيه ستار إز بورن"
+      },
+      {
+        "_id": "631d25592da9c48f17faf5eb",
+        "channel": "10",
+        "date": "2022-09-18T06:30:00.000Z",
+        "movieId": "627ef1d32da9c48f1779a50f",
+        "duration": "88 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1583914503-mbc2-poster.jpg",
+        "active": true,
+        "titleEn": "Step Up: Miami Heat",
+        "titleAr": "ستيب أب: ميامي هيت"
+      },
+      {
+        "_id": "631d25602da9c48f17faf6ac",
+        "channel": "10",
+        "date": "2022-09-18T08:30:00.000Z",
+        "movieId": "62f052622da9c48f17dada37",
+        "movieRelease": "2011-03-04T00:00:00.000Z",
+        "duration": "96 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTc4NjEyODE1OV5BMl5BanBnXkFtZTcwMjYzNTkxNA@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Rango",
+        "titleAr": "رانجو"
+      },
+      {
+        "_id": "631d255b2da9c48f17faf61d",
+        "channel": "10",
+        "date": "2022-09-18T11:00:00.000Z",
+        "movieId": "627071822da9c48f176eaafd",
+        "movieRelease": "2016-12-25T00:00:00.000Z",
+        "duration": "115 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "La La Land",
+        "titleAr": "لا لا لاند"
+      },
+      {
+        "_id": "631d25572da9c48f17faf5be",
+        "channel": "10",
+        "date": "2022-09-18T13:30:00.000Z",
+        "movieId": "62ef00ca2da9c48f17d9cc5c",
+        "movieRelease": "2012-12-21T00:00:00.000Z",
+        "duration": "121 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTM1NjUxMDI3OV5BMl5BanBnXkFtZTcwNjg1ODM3OA@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Jack Reacher",
+        "titleAr": "جاك ريتشر"
+      },
+      {
+        "_id": "631d25582da9c48f17faf5cc",
+        "channel": "10",
+        "date": "2022-09-18T16:00:00.000Z",
+        "movieId": "61d23d53c8bbcdbbd0559b40",
+        "movieRelease": "2016-10-21T00:00:00.000Z",
+        "duration": "109 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BODQ3ODQ3NDI4NV5BMl5BanBnXkFtZTgwMDY1Mzk5OTE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Jack Reacher: Never Go Back",
+        "titleAr": "جاك ريتشر: نيفير جو باك"
+      },
+      {
+        "_id": "631d25602da9c48f17faf6a9",
+        "channel": "10",
+        "date": "2022-09-18T18:00:00.000Z",
+        "movieId": "631d25602da9c48f17faf6a7",
+        "duration": "30 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1580128950-7741-poster.jpg",
+        "active": true,
+        "titleEn": "Scoop With Raya (2022): Ep 38",
+        "titleAr": "سكووب مع ريا"
+      },
+      {
+        "_id": "631d255b2da9c48f17faf620",
+        "channel": "10",
+        "date": "2022-09-18T18:30:00.000Z",
+        "movieId": "61db780bc8bbcdbbd0635b09",
+        "movieRelease": "2018-01-05T00:00:00.000Z",
+        "duration": "127 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNTkzMzRlYjEtMTQ5Yi00OWY3LWI0NzYtNGQ4ZDkzZTU0M2IwXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Molly's Game",
+        "titleAr": "موليز جيم"
+      },
+      {
+        "_id": "631d25592da9c48f17faf5ee",
+        "channel": "10",
+        "date": "2022-09-18T21:00:00.000Z",
+        "movieId": "61ef3e4fc8bbcdbbd078f538",
+        "movieRelease": "2013-12-25T00:00:00.000Z",
+        "duration": "145 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "The Wolf Of Wall Street",
+        "titleAr": "ذي وولف أوف وول ستريت"
+      }
+    ]
+  }
+]

@@ -1,0 +1,274 @@
+[
+  {
+    "_id": "25",
+    "movies": [
+      {
+        "_id": "6317df692da9c48f17fa59e7",
+        "channel": "25",
+        "date": "2022-09-14T22:30:00.000Z",
+        "movieId": "6292b83e2da9c48f1788c052",
+        "movieRelease": "2013-07-19T00:00:00.000Z",
+        "duration": "88 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTM5OTYxNzE5N15BMl5BanBnXkFtZTcwMDU1MTQ4OQ@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "R.I.P.D.",
+        "titleAr": ".R.I.P.D"
+      },
+      {
+        "_id": "631930e82da9c48f17fa8292",
+        "channel": "25",
+        "date": "2022-09-15T06:30:00.000Z",
+        "movieId": "62df2ede2da9c48f17cc46ff",
+        "movieRelease": "2004-02-13T00:00:00.000Z",
+        "duration": "84 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjAwMzc4MDgxNF5BMl5BanBnXkFtZTYwNjUwMzE3._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "50 First Dates",
+        "titleAr": "50 فيرست ديتس"
+      },
+      {
+        "_id": "631930e32da9c48f17fa8207",
+        "channel": "25",
+        "date": "2022-09-15T08:00:00.000Z",
+        "movieId": "61ec9b3dc8bbcdbbd0763a6c",
+        "movieRelease": "2013-07-06T00:00:00.000Z",
+        "duration": "88 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTMxMzQ3NzYxM15BMl5BanBnXkFtZTcwNTMwODY5MQ@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Lower Learning",
+        "titleAr": "لور ليرنينج"
+      },
+      {
+        "_id": "631930e82da9c48f17fa8287",
+        "channel": "25",
+        "date": "2022-09-15T09:30:00.000Z",
+        "movieId": "62084ab3c8bbcdbbd097e83f",
+        "movieRelease": "2009-06-19T00:00:00.000Z",
+        "duration": "80 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjAwODk1ODQxOV5BMl5BanBnXkFtZTcwOTU1MTM5MQ@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Labor Pains",
+        "titleAr": "ليبور بينز"
+      },
+      {
+        "_id": "631930ec2da9c48f17fa82e4",
+        "channel": "25",
+        "date": "2022-09-15T11:00:00.000Z",
+        "movieId": "61d4e069c8bbcdbbd05a3f58",
+        "movieRelease": "2010-10-22T00:00:00.000Z",
+        "duration": "92 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTgxOTk4MDIyOF5BMl5BanBnXkFtZTcwMzI3Nzc3Mw@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Stone",
+        "titleAr": "ستون"
+      },
+      {
+        "_id": "631930e02da9c48f17fa81ac",
+        "channel": "25",
+        "date": "2022-09-15T13:00:00.000Z",
+        "movieId": "61d23d55c8bbcdbbd0559bc2",
+        "movieRelease": "2018-06-01T00:00:00.000Z",
+        "duration": "87 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTkxMTI2MjE4OF5BMl5BanBnXkFtZTgwMjIyODQzNTM@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Adrift",
+        "titleAr": "أدريفت"
+      },
+      {
+        "_id": "631930e12da9c48f17fa81bf",
+        "channel": "25",
+        "date": "2022-09-15T15:00:00.000Z",
+        "movieId": "61f72748c8bbcdbbd0822d81",
+        "movieRelease": "2013-01-04T00:00:00.000Z",
+        "duration": "98 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjA5NTA3NzQ5Nl5BMl5BanBnXkFtZTcwOTYxNjY0OA@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "The Impossible",
+        "titleAr": "ذي إمبوسيبل"
+      },
+      {
+        "_id": "631930e22da9c48f17fa81f1",
+        "channel": "25",
+        "date": "2022-09-15T17:00:00.000Z",
+        "movieId": "61ec9b39c8bbcdbbd07639d4",
+        "movieRelease": "2016-09-30T00:00:00.000Z",
+        "duration": "94 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BOTEzNDU0OTgxM15BMl5BanBnXkFtZTgwNjA0ODM2OTE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Deepwater Horizon",
+        "titleAr": "ديبواتر هورايزن"
+      },
+      {
+        "_id": "631930e72da9c48f17fa8272",
+        "channel": "25",
+        "date": "2022-09-15T18:35:00.000Z",
+        "movieId": "631930e52da9c48f17fa823e",
+        "duration": "30 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579440967-entertainment-tonight-profile.jpg",
+        "active": true,
+        "titleEn": "Entertainment Tonight (42): Ep 8",
+        "titleAr": "إنترتاينمنت تونايت"
+      },
+      {
+        "_id": "631930dd2da9c48f17fa815b",
+        "channel": "25",
+        "date": "2022-09-15T19:00:00.000Z",
+        "movieId": "62f2f57a2da9c48f17dcff02",
+        "movieRelease": "2015-09-25T00:00:00.000Z",
+        "duration": "110 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTNmMzM0ZTktZWY3Yy00ODViLTllZDgtODcwM2QyM2E2YTU2L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Everest",
+        "titleAr": "إفرست"
+      },
+      {
+        "_id": "631930e02da9c48f17fa81a1",
+        "channel": "25",
+        "date": "2022-09-15T21:00:00.000Z",
+        "movieId": "61d23d54c8bbcdbbd0559b71",
+        "movieRelease": "2012-01-27T00:00:00.000Z",
+        "duration": "102 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNDY4MTQwMzc1MV5BMl5BanBnXkFtZTcwNzcwNTM5Ng@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "The Grey",
+        "titleAr": "ذا جراي"
+      }
+    ]
+  },
+  {
+    "_id": "10",
+    "movies": [
+      {
+        "_id": "6317df632da9c48f17fa5928",
+        "channel": "10",
+        "date": "2022-09-14T22:00:00.000Z",
+        "movieId": "6317df632da9c48f17fa5926",
+        "movieRelease": "2016-04-01T00:00:00.000Z",
+        "duration": "83 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMzAxNDY3ODk3MF5BMl5BanBnXkFtZTgwMjYwNDA5NzE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Meet The Blacks",
+        "titleAr": "ميت ذا بلاكس"
+      },
+      {
+        "_id": "6317df6a2da9c48f17fa59fb",
+        "channel": "10",
+        "date": "2022-09-14T23:50:00.000Z",
+        "movieId": "63153c572da9c48f17f8fc4c",
+        "movieRelease": "2019-05-17T00:00:00.000Z",
+        "duration": "135 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "John Wick: Chapter 3 - Parabellum",
+        "titleAr": "جون ويك شبتر ثري - بارابلوم"
+      },
+      {
+        "_id": "631930dd2da9c48f17fa8158",
+        "channel": "10",
+        "date": "2022-09-15T06:30:00.000Z",
+        "movieId": "61d23d55c8bbcdbbd0559ba6",
+        "movieRelease": "2013-07-12T00:00:00.000Z",
+        "duration": "88 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNTZkZDhjZTEtZjA5MC00MDU2LTk3NDItNzA2YzQ4Y2Q5NjZhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Grown Ups 2",
+        "titleAr": "جرون أبس 2"
+      },
+      {
+        "_id": "631930eb2da9c48f17fa82cd",
+        "channel": "10",
+        "date": "2022-09-15T08:00:00.000Z",
+        "movieId": "62e717c72da9c48f17d342cd",
+        "movieRelease": "1981-08-28T00:00:00.000Z",
+        "duration": "103 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNjQ2MDg4ZDUtNTA0Ny00Nzc3LWFmM2UtY2I0YWRjNjZkMTg0XkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Gallipoli",
+        "titleAr": "جاليبولي"
+      },
+      {
+        "_id": "631930e42da9c48f17fa8215",
+        "channel": "10",
+        "date": "2022-09-15T10:00:00.000Z",
+        "movieId": "6317df652da9c48f17fa5968",
+        "movieRelease": "2008-05-23T00:00:00.000Z",
+        "duration": "85 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTM1MjM0ODc5N15BMl5BanBnXkFtZTcwMjMxMDg1MQ@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Son Of Rambow",
+        "titleAr": "سن أوف رامبو"
+      },
+      {
+        "_id": "631930e72da9c48f17fa827d",
+        "channel": "10",
+        "date": "2022-09-15T11:30:00.000Z",
+        "movieId": "61dcc968c8bbcdbbd064ca36",
+        "movieRelease": "2015-01-30T00:00:00.000Z",
+        "duration": "96 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTUxMjQ2NjI4OV5BMl5BanBnXkFtZTgwODc2NjUwNDE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "Project Almanac",
+        "titleAr": "بروجيكت ألماناك"
+      },
+      {
+        "_id": "631930e52da9c48f17fa8240",
+        "channel": "10",
+        "date": "2022-09-15T13:30:00.000Z",
+        "movieId": "631930e52da9c48f17fa823e",
+        "duration": "30 min",
+        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579440967-entertainment-tonight-profile.jpg",
+        "active": true,
+        "titleEn": "Entertainment Tonight (42): Ep 8",
+        "titleAr": "إنترتاينمنت تونايت"
+      },
+      {
+        "_id": "631930dc2da9c48f17fa8155",
+        "channel": "10",
+        "date": "2022-09-15T14:00:00.000Z",
+        "movieId": "631930dc2da9c48f17fa8153",
+        "movieRelease": "2014-02-12T00:00:00.000Z",
+        "duration": "89 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjAyOTUzMTcxN15BMl5BanBnXkFtZTgwMjkyOTc1MDE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "RoboCop",
+        "titleAr": "روبوكوب"
+      },
+      {
+        "_id": "631930de2da9c48f17fa8173",
+        "channel": "10",
+        "date": "2022-09-15T16:00:00.000Z",
+        "movieId": "631930de2da9c48f17fa8171",
+        "movieRelease": "1990-06-22T00:00:00.000Z",
+        "duration": "107 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNGQ5ZjI3YzYtNjM2Ni00MTFjLWEyOWMtOTEwNjI5MThlZTlmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "RoboCop 2",
+        "titleAr": "روبوكوب 2"
+      },
+      {
+        "_id": "631930df2da9c48f17fa8184",
+        "channel": "10",
+        "date": "2022-09-15T18:00:00.000Z",
+        "movieId": "631930df2da9c48f17fa8182",
+        "movieRelease": "1993-11-05T00:00:00.000Z",
+        "duration": "94 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTk4NTU5ODYyNl5BMl5BanBnXkFtZTcwMjkzODM1NA@@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "RoboCop 3",
+        "titleAr": "روبوكوب 3"
+      },
+      {
+        "_id": "631930de2da9c48f17fa816b",
+        "channel": "10",
+        "date": "2022-09-15T20:00:00.000Z",
+        "movieId": "62269d702da9c48f1738c273",
+        "movieRelease": "2014-02-12T00:00:00.000Z",
+        "duration": "106 min",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjAyOTUzMTcxN15BMl5BanBnXkFtZTgwMjkyOTc1MDE@._V1_SX300.jpg",
+        "active": true,
+        "titleEn": "RoboCop",
+        "titleAr": "روبوكوب"
+      }
+    ]
+  }
+]

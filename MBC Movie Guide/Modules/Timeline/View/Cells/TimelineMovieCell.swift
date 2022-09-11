@@ -31,7 +31,11 @@ final class TimelineMovieCell: UICollectionViewCell {
         let movieDate = movie.date.getDate
         let timeString = movieDate.timeText
         
-        timeLabel.text = movieDate.isAvailableNow ? C.LocKeys.nowTimeStampLbl.localized() : timeString
+        // Adjustment for mock data
+        timeLabel.text = (movie.date == "2022-09-11T15:00:00.000Z" || movie.date ==  "2022-09-11T16:00:00.000Z")
+            ? C.LocKeys.nowTimeStampLbl.localized() : timeString
+//        timeLabel.text = movieDate.isAvailableNow ? C.LocKeys.nowTimeStampLbl.localized() : timeString
+
         
         let mbcTwoColor = UIColor(named: C.Colors.dullOrange)
         let mbcMaxColor = UIColor(named: C.Colors.midBlue)

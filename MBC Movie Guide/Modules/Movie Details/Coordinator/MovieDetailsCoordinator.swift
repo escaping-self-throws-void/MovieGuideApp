@@ -34,7 +34,7 @@ final class MovieDetailsCoordinator {
         guard let viewController = viewController else {
             return
         }
-        let viewModel = MovieDetailsViewModel(service: APIFetcher(), id: movieId)
+        let viewModel = MovieDetailsViewModel(service: MockFetcher(), id: movieId)
         viewController.viewModel = viewModel
         navigationController.pushViewController(viewController, animated: true)
     }
