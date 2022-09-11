@@ -15,7 +15,10 @@ final class MBCImageView: UIImageView {
     }
     
     private func libSetImage(with url: URL?, placeholder: UIImage? = nil) {
-        sd_setImage(with: url, placeholderImage: placeholder)
+        // Adjustment for mock data
+        let mockImage = UIImage(named: url?.absoluteString ?? "")
+        image = mockImage ?? placeholder
+//        sd_setImage(with: url, placeholderImage: placeholder)
     }
     
 }

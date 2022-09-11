@@ -27,6 +27,12 @@
 		CF0FFD7228CE3AB900301935 /* movie63168de62da9c48f17fa111c.json in Resources */ = {isa = PBXBuildFile; fileRef = CF0FFD7128CE3AB900301935 /* movie63168de62da9c48f17fa111c.json */; };
 		CF11BCE7287D9D420052A1DF /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF11BCE6287D9D420052A1DF /* UserSession.swift */; };
 		CF11BCE9287D9F380052A1DF /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF11BCE8287D9F380052A1DF /* String+Extensions.swift */; };
+		CF227BE728CE4BD100DB8E9F /* timeline13.json in Resources */ = {isa = PBXBuildFile; fileRef = CF227BE628CE4BD100DB8E9F /* timeline13.json */; };
+		CF227BE928CE54BB00DB8E9F /* timeline14.json in Resources */ = {isa = PBXBuildFile; fileRef = CF227BE828CE54BB00DB8E9F /* timeline14.json */; };
+		CF227BED28CE54FC00DB8E9F /* timeline15.json in Resources */ = {isa = PBXBuildFile; fileRef = CF227BEC28CE54FC00DB8E9F /* timeline15.json */; };
+		CF227BEF28CE553C00DB8E9F /* timeline16.json in Resources */ = {isa = PBXBuildFile; fileRef = CF227BEE28CE553C00DB8E9F /* timeline16.json */; };
+		CF227BF728CE567D00DB8E9F /* timeline17.json in Resources */ = {isa = PBXBuildFile; fileRef = CF227BF628CE567D00DB8E9F /* timeline17.json */; };
+		CF227BF928CE569500DB8E9F /* timeline18.json in Resources */ = {isa = PBXBuildFile; fileRef = CF227BF828CE569500DB8E9F /* timeline18.json */; };
 		CF47AF962875C5A400ADED3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47AF952875C5A400ADED3D /* AppDelegate.swift */; };
 		CF47AF982875C5A400ADED3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47AF972875C5A400ADED3D /* SceneDelegate.swift */; };
 		CF47AF9A2875C5A400ADED3D /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47AF992875C5A400ADED3D /* LandingViewController.swift */; };
@@ -140,6 +146,12 @@
 		CF0FFD7128CE3AB900301935 /* movie63168de62da9c48f17fa111c.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movie63168de62da9c48f17fa111c.json; sourceTree = "<group>"; };
 		CF11BCE6287D9D420052A1DF /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		CF11BCE8287D9F380052A1DF /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		CF227BE628CE4BD100DB8E9F /* timeline13.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline13.json; sourceTree = "<group>"; };
+		CF227BE828CE54BB00DB8E9F /* timeline14.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline14.json; sourceTree = "<group>"; };
+		CF227BEC28CE54FC00DB8E9F /* timeline15.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline15.json; sourceTree = "<group>"; };
+		CF227BEE28CE553C00DB8E9F /* timeline16.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline16.json; sourceTree = "<group>"; };
+		CF227BF628CE567D00DB8E9F /* timeline17.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline17.json; sourceTree = "<group>"; };
+		CF227BF828CE569500DB8E9F /* timeline18.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline18.json; sourceTree = "<group>"; };
 		CF47AF922875C5A400ADED3D /* MBC Movie Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MBC Movie Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF47AF952875C5A400ADED3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF47AF972875C5A400ADED3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,12 +167,6 @@
 		CF601E472885A45800AA7E80 /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
 		CF650C8F28CE00D500B67B9C /* timeline11.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline11.json; sourceTree = "<group>"; };
 		CF650C9228CE01A800B67B9C /* timeline12.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline12.json; sourceTree = "<group>"; };
-		CF650C9728CE021200B67B9C /* timeline13.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline13.json; sourceTree = "<group>"; };
-		CF650C9828CE022800B67B9C /* timeline18.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline18.json; sourceTree = "<group>"; };
-		CF650C9A28CE023D00B67B9C /* timeline17.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline17.json; sourceTree = "<group>"; };
-		CF650C9B28CE023E00B67B9C /* timeline16.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline16.json; sourceTree = "<group>"; };
-		CF650C9C28CE024300B67B9C /* timeline15.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline15.json; sourceTree = "<group>"; };
-		CF650C9D28CE024400B67B9C /* timeline14.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline14.json; sourceTree = "<group>"; };
 		CF7006E128871B7700D8F374 /* SideMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCoordinator.swift; sourceTree = "<group>"; };
 		CF7316F02886952B00F85F60 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		CF7316F42886982A00F85F60 /* SideMenuUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuUIModel.swift; sourceTree = "<group>"; };
@@ -490,12 +496,12 @@
 			children = (
 				CF650C8F28CE00D500B67B9C /* timeline11.json */,
 				CF650C9228CE01A800B67B9C /* timeline12.json */,
-				CF650C9728CE021200B67B9C /* timeline13.json */,
-				CF650C9D28CE024400B67B9C /* timeline14.json */,
-				CF650C9C28CE024300B67B9C /* timeline15.json */,
-				CF650C9B28CE023E00B67B9C /* timeline16.json */,
-				CF650C9A28CE023D00B67B9C /* timeline17.json */,
-				CF650C9828CE022800B67B9C /* timeline18.json */,
+				CF227BE628CE4BD100DB8E9F /* timeline13.json */,
+				CF227BE828CE54BB00DB8E9F /* timeline14.json */,
+				CF227BEC28CE54FC00DB8E9F /* timeline15.json */,
+				CF227BEE28CE553C00DB8E9F /* timeline16.json */,
+				CF227BF628CE567D00DB8E9F /* timeline17.json */,
+				CF227BF828CE569500DB8E9F /* timeline18.json */,
 			);
 			path = Timelines;
 			sourceTree = "<group>";
@@ -1040,17 +1046,21 @@
 				CFAEBA8A288997E600C5E8CF /* SectionTitleReusableHeaderView.xib in Resources */,
 				CFC330FE287611B3001A956C /* Almarai-Light.ttf in Resources */,
 				CFA7AA0628789B62001434F5 /* SUMinorTableViewCell.xib in Resources */,
+				CF227BED28CE54FC00DB8E9F /* timeline15.json in Resources */,
 				CF47AFA22875C5A600ADED3D /* LaunchScreen.storyboard in Resources */,
 				CFE2CC262889CD3000006B54 /* DirectorsCollectionViewCell.xib in Resources */,
 				CFC330FA287611B3001A956C /* Almarai-Bold.ttf in Resources */,
+				CF227BE928CE54BB00DB8E9F /* timeline14.json in Resources */,
 				CF0FFD7228CE3AB900301935 /* movie63168de62da9c48f17fa111c.json in Resources */,
 				CF8DD0CF2887E02D00A5ECFE /* MovieDetails.storyboard in Resources */,
 				CFAEBA772889728B00C5E8CF /* CastCollectionViewCell.xib in Resources */,
 				CF8EB66428832FBE00D8F616 /* PopUpTableViewCell.xib in Resources */,
 				CFAEBA862889769E00C5E8CF /* heebo.medium.ttf in Resources */,
 				CF0FFD6E28CE3A4C00301935 /* movie63153c542da9c48f17f8fbf2.json in Resources */,
+				CF227BF928CE569500DB8E9F /* timeline18.json in Resources */,
 				CF47AF9F2875C5A600ADED3D /* Assets.xcassets in Resources */,
 				CF601E492885A45800AA7E80 /* SideMenuTableViewCell.xib in Resources */,
+				CF227BF728CE567D00DB8E9F /* timeline17.json in Resources */,
 				CFF9F2B02886F8A700DDE552 /* SideMenuViewController.storyboard in Resources */,
 				CFC7E22A2889D9A400958AFC /* GenresCollectionViewCell.xib in Resources */,
 				CF650C9028CE00D500B67B9C /* timeline11.json in Resources */,
@@ -1062,6 +1072,7 @@
 				CF0FFD7028CE3A8700301935 /* movie6313ead42da9c48f17f7fd6b.json in Resources */,
 				CFAEBA7328896AFF00C5E8CF /* SynopsisCollectionViewCell.xib in Resources */,
 				CFAEBA852889769E00C5E8CF /* heebo.black.ttf in Resources */,
+				CF227BE728CE4BD100DB8E9F /* timeline13.json in Resources */,
 				CFC8E9522876F5DE006E33E6 /* SignUpTableViewCell.xib in Resources */,
 				CF0B3080287E9ECB00C093BA /* TimelineViewController.storyboard in Resources */,
 				CF650C9328CE01A800B67B9C /* timeline12.json in Resources */,
@@ -1074,6 +1085,7 @@
 				CFA61A39288BE4F200ACB756 /* Settings.storyboard in Resources */,
 				CFBFD75C2876B3E500D4BBBB /* SignUpViewController.storyboard in Resources */,
 				CFAEBA802889769E00C5E8CF /* heebo.thin.ttf in Resources */,
+				CF227BEF28CE553C00DB8E9F /* timeline16.json in Resources */,
 				CFC330FC287611B3001A956C /* Almarai-Regular.ttf in Resources */,
 				CFA61A24288A80A300ACB756 /* ReminderMenu.storyboard in Resources */,
 			);

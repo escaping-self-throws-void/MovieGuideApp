@@ -9,7 +9,6 @@
         "movieId": "631147dc2da9c48f17f5ea1a",
         "movieRelease": "2015-10-16T00:00:00.000Z",
         "duration": "119 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BZmNkYzk3YjItOTMwYy00ZWViLWIxMTUtZDJiZmY0ZWExYjVmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Crimson Peak",
         "titleAr": "كريمسون بيك"
@@ -21,7 +20,6 @@
         "movieId": "61f48448c8bbcdbbd07f3bb3",
         "movieRelease": "2010-12-22T00:00:00.000Z",
         "duration": "90 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTkwNjE3NjQwOV5BMl5BanBnXkFtZTcwNzAyNTMwNA@@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Little Fockers",
         "titleAr": "ليتل فوكرز"
@@ -33,7 +31,6 @@
         "movieId": "61e603cfc8bbcdbbd06f5838",
         "movieRelease": "2011-09-09T00:00:00.000Z",
         "duration": "149 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTk4ODk5MTMyNV5BMl5BanBnXkFtZTcwMDMyNTg0Ng@@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Warrior",
         "titleAr": "ووريور"
@@ -45,7 +42,6 @@
         "movieId": "628c20d32da9c48f17839c01",
         "movieRelease": "2012-01-20T00:00:00.000Z",
         "duration": "99 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BNjEyYWViNjEtMjVkNy00YzA2LTllMTctZjViOGRjMDQ2Njk5XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Knockout",
         "titleAr": "نوكاوت"
@@ -56,7 +52,6 @@
         "date": "2022-09-12T12:00:00.000Z",
         "movieId": "63168dd92da9c48f17fa0f7d",
         "duration": "25 min",
-        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579440994-hollywood-buzz.jpg",
         "active": true,
         "titleEn": "Hollywood Buzz (5): Ep 38",
         "titleAr": "هوليوود باز"
@@ -67,7 +62,6 @@
         "date": "2022-09-12T12:04:00.000Z",
         "movieId": "63168dd92da9c48f17fa0f7d",
         "duration": "25 min",
-        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579440994-hollywood-buzz.jpg",
         "active": true,
         "titleEn": "Hollywood Buzz (5): Ep 38",
         "titleAr": "هوليوود باز"
@@ -79,7 +73,6 @@
         "movieId": "63153c582da9c48f17f8fc73",
         "movieRelease": "2006-07-28T00:00:00.000Z",
         "duration": "118 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTM4MDQ5MTkxMV5BMl5BanBnXkFtZTcwMTU4MzUzMQ@@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Miami Vice",
         "titleAr": "ميامي فايس"
@@ -111,7 +104,6 @@
         "movieId": "63153c552da9c48f17f8fc14",
         "movieRelease": "2007-08-24T00:00:00.000Z",
         "duration": "96 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BNTIwMjE2Mjc1MF5BMl5BanBnXkFtZTYwNzI0OTI3._V1_SX300.jpg",
         "active": true,
         "titleEn": "War",
         "titleAr": "وور"
@@ -123,7 +115,6 @@
         "movieId": "61d23d51c8bbcdbbd0559a9e",
         "movieRelease": "2014-10-09T00:00:00.000Z",
         "duration": "103 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BNDM5MDIxNzYyNV5BMl5BanBnXkFtZTgwMDUzMTk4MTE@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Kill The Messenger",
         "titleAr": "كيل ذا ماسنجر"
@@ -135,7 +126,6 @@
         "movieId": "626c7d262da9c48f176bc829",
         "movieRelease": "2012-08-10T00:00:00.000Z",
         "duration": "122 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTc4Njk3MDM1Nl5BMl5BanBnXkFtZTcwODgyOTMxOA@@._V1_SX300.jpg",
         "active": true,
         "titleEn": "The Bourne Legacy",
         "titleAr": "ذا بورن ليجاسي"
@@ -147,7 +137,6 @@
         "movieId": "6240fb372da9c48f174fd690",
         "movieRelease": "2013-06-28T00:00:00.000Z",
         "duration": "99 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMjI0ODc3NjI4NV5BMl5BanBnXkFtZTcwOTc3MzI1OQ@@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Hummingbird",
         "titleAr": "همينجبيرد"
@@ -163,7 +152,6 @@
         "date": "2022-09-11T23:00:00.000Z",
         "movieId": "630d53692da9c48f17f2d75f",
         "duration": "25 min",
-        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579441021-action-zone-profile.jpg",
         "active": true,
         "titleEn": "Action Zone (5): Ep 36",
         "titleAr": "أكشن زون"
@@ -174,7 +162,6 @@
         "date": "2022-09-11T23:05:00.000Z",
         "movieId": "630d53692da9c48f17f2d75f",
         "duration": "25 min",
-        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579441021-action-zone-profile.jpg",
         "active": true,
         "titleEn": "Action Zone (5): Ep 36",
         "titleAr": "أكشن زون"
@@ -186,7 +173,6 @@
         "movieId": "6313ead12da9c48f17f7fd29",
         "movieRelease": "2018-08-10T00:00:00.000Z",
         "duration": "97 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMjE0MzcwMDAyNl5BMl5BanBnXkFtZTgwMzc4ODg0NDM@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Slender Man",
         "titleAr": "سلندرمان"
@@ -198,7 +184,6 @@
         "movieId": "6313ead12da9c48f17f7fd29",
         "movieRelease": "2018-08-10T00:00:00.000Z",
         "duration": "97 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMjE0MzcwMDAyNl5BMl5BanBnXkFtZTgwMzc4ODg0NDM@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Slender Man",
         "titleAr": "سلندرمان"
@@ -209,7 +194,6 @@
         "date": "2022-09-12T06:00:00.000Z",
         "movieId": "6313eade2da9c48f17f7feae",
         "duration": "37 min",
-        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1580128950-7741-poster.jpg",
         "active": true,
         "titleEn": "Scoop With Raya (2022): Ep 37",
         "titleAr": "سكووب مع ريا"
@@ -220,7 +204,6 @@
         "date": "2022-09-12T06:12:00.000Z",
         "movieId": "6313eade2da9c48f17f7feae",
         "duration": "37 min",
-        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1580128950-7741-poster.jpg",
         "active": true,
         "titleEn": "Scoop With Raya (2022): Ep 37",
         "titleAr": "سكووب مع ريا"
@@ -232,7 +215,6 @@
         "movieId": "62142842c8bbcdbbd0a657dc",
         "movieRelease": "2015-10-02T00:00:00.000Z",
         "duration": "149 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_SX300.jpg",
         "active": true,
         "titleEn": "The Martian",
         "titleAr": "ذا مارشن"
@@ -244,7 +226,6 @@
         "movieId": "62142842c8bbcdbbd0a657dc",
         "movieRelease": "2015-10-02T00:00:00.000Z",
         "duration": "149 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_SX300.jpg",
         "active": true,
         "titleEn": "The Martian",
         "titleAr": "ذا مارشن"
@@ -255,7 +236,6 @@
         "date": "2022-09-12T09:00:00.000Z",
         "movieId": "63153c5c2da9c48f17f8fcee",
         "duration": "25 min",
-        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1579441062-films-&-stars-poster.jpg",
         "active": true,
         "titleEn": "Films & Stars (5): Ep 38",
         "titleAr": "فيلمز & ستارز"
@@ -267,7 +247,6 @@
         "movieId": "61e4b23ac8bbcdbbd06de0d3",
         "movieRelease": "2016-07-27T00:00:00.000Z",
         "duration": "105 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTUzOTg1OTM4NV5BMl5BanBnXkFtZTgwMTg2Mjg0OTE@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Nerve",
         "titleAr": "نيرف"
@@ -279,7 +258,6 @@
         "movieId": "61e4b23ac8bbcdbbd06de0d3",
         "movieRelease": "2016-07-27T00:00:00.000Z",
         "duration": "105 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTUzOTg1OTM4NV5BMl5BanBnXkFtZTgwMTg2Mjg0OTE@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Nerve",
         "titleAr": "نيرف"
@@ -311,7 +289,6 @@
         "movieId": "63153c5c2da9c48f17f8fce8",
         "movieRelease": "1978-06-16T00:00:00.000Z",
         "duration": "120 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BZmUyMDEyOTgtZmUwOS00NTdkLThlNzctNTM1ODQ4M2VhMjdhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Grease",
         "titleAr": "جريس"
@@ -322,7 +299,6 @@
         "date": "2022-09-12T13:30:00.000Z",
         "movieId": "6313eade2da9c48f17f7feae",
         "duration": "37 min",
-        "poster": "https://s3.amazonaws.com/wizzo-video-api/the-voice-s5/1580128950-7741-poster.jpg",
         "active": true,
         "titleEn": "Scoop With Raya (2022): Ep 37",
         "titleAr": "سكووب مع ريا"
@@ -334,7 +310,6 @@
         "movieId": "625370902da9c48f175cba8d",
         "movieRelease": "2011-08-26T00:00:00.000Z",
         "duration": "98 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTM0NDI2NjgxNl5BMl5BanBnXkFtZTcwMTYyNjA3NQ@@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Colombiana",
         "titleAr": "كولومبيانا"
@@ -346,7 +321,6 @@
         "movieId": "625370902da9c48f175cba8d",
         "movieRelease": "2011-08-26T00:00:00.000Z",
         "duration": "98 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTM0NDI2NjgxNl5BMl5BanBnXkFtZTcwMTYyNjA3NQ@@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Colombiana",
         "titleAr": "كولومبيانا"
@@ -358,7 +332,6 @@
         "movieId": "61d23d55c8bbcdbbd0559bde",
         "movieRelease": "2010-08-27T00:00:00.000Z",
         "duration": "103 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMTg4ODg5NzkzNl5BMl5BanBnXkFtZTcwNzAyODM5Mw@@._V1_SX300.jpg",
         "active": true,
         "titleEn": "Takers",
         "titleAr": "تيكرز"
@@ -370,7 +343,6 @@
         "movieId": "63153c552da9c48f17f8fc06",
         "movieRelease": "2017-02-10T00:00:00.000Z",
         "duration": "116 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@._V1_SX300.jpg",
         "active": true,
         "titleEn": "John Wick: Chapter 2",
         "titleAr": "جون ويك: تشابتر 2"
@@ -382,7 +354,6 @@
         "movieId": "63153c572da9c48f17f8fc4c",
         "movieRelease": "2019-05-17T00:00:00.000Z",
         "duration": "135 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg",
         "active": true,
         "titleEn": "John Wick: Chapter 3 - Parabellum",
         "titleAr": "جون ويك شبتر ثري - بارابلوم"
@@ -394,7 +365,6 @@
         "movieId": "63153c572da9c48f17f8fc4c",
         "movieRelease": "2019-05-17T00:00:00.000Z",
         "duration": "135 min",
-        "poster": "https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg",
         "active": true,
         "titleEn": "John Wick: Chapter 3 - Parabellum",
         "titleAr": "جون ويك شبتر ثري - بارابلوم"

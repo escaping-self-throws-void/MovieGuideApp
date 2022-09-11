@@ -36,7 +36,6 @@ final class MockFetcher: APIService {
     
     func fetchMovies(on date: String, completion: @escaping MovieDataResult) {
         let filename = "timeline" + date.suffix(2)
-        print(filename)
         loadJSON(filename: filename, completion: completion)
     }
     
@@ -47,7 +46,6 @@ final class MockFetcher: APIService {
     
     private func loadJSON<T:Decodable>(filename: String, completion: @escaping (Result<T, NError>) -> Void) {
         guard let path = bundle.url(forResource: filename, withExtension: "json") else {
-            print("FUCK")
             completion(.failure(.invalidURL))
             return
         }
