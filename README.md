@@ -80,7 +80,7 @@ Protocol Network Service with default implementation in extension using generic 
 ## Authors
 
  Paul Matar
- [@p_a_matar](https://twitter.com/p_a_matar)
+ [/paul_matar](https://www.linkedin.com/in/paul-matar/)
 
 
 
