@@ -80,7 +80,7 @@ Protocol Network Service with default implementation in extension using generic 
 ## Authors
 
  Paul Matar
- [/paul_matar](https://www.linkedin.com/in/paul-matar/)
+ [paul_matar](https://www.linkedin.com/in/paul-matar/)
 
 
 
@@ -91,4 +91,4 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Acknowledgments
 
 
-[MBC Movie Guide]((https://apps.apple.com/us/app/mbc-movie-guide/id508408034))
+[MBC Movie Guide](https://apps.apple.com/us/app/mbc-movie-guide/id508408034)
