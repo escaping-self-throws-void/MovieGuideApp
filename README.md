@@ -3,6 +3,8 @@
 
 
 MBC Movie Guide clone with english and arabic localizations. Browse upcoming movies for a selected date and add a reminder to your calendar.
+#### Disclaimer 
+Mock data were used instead of real APIs. 
 
 ## Description
 
@@ -87,7 +89,6 @@ Protocol Network Service with default implementation in extension using generic 
 ## Authors
 
  [Paul Matar](https://www.linkedin.com/in/paul-matar/)
-
 
 
 ## License
