@@ -19,26 +19,33 @@ MBC Movie Guide clone with english and arabic localizations. Browse upcoming mov
 * _
 * _
 
-![Timeline+Date.gif]
-
+![Timeline+Date](https://user-images.githubusercontent.com/24648375/189544958-c2c5cd3e-4922-4a9b-9e30-2c3755cb4abb.gif)
 
 ### Movie Details Screen
 * _
 * _
 
-![Details+Share.gif]
+![Details+Share](https://user-images.githubusercontent.com/24648375/189544991-6ebe4712-dc7a-4b9d-b22d-bb4232863fa2.gif)
+
 
 ### Add reminder to your Calendar
 * _
 * _
 
-![Reminder.gif]
+![Reminder](https://user-images.githubusercontent.com/24648375/189545019-fc86739f-ff77-4aa4-83f3-c1fec6faffb0.gif)
 
-### Movie Details Screen
+
+### Settings Time Format Privacy
 * _
 * _
 
-![Details+Share.gif]
+![Settings+TimeFormat+Privacy](https://user-images.githubusercontent.com/24648375/189545055-3b22055c-3592-4894-b334-7e2891c15d8f.gif)
+
+### Localization
+* _
+* _
+
+![Localization](https://user-images.githubusercontent.com/24648375/189545083-8c6cba62-5e27-4375-97e1-454b849b0b9f.gif)
 
 ## Tools used
 
