@@ -3,8 +3,8 @@
 
 
 MBC Movie Guide clone with english and arabic localizations. Browse upcoming movies for a selected date and add a reminder to your calendar.
-#### Disclaimer 
-Mock data were used instead of real APIs. 
+#### Disclaimer - Mock data were used instead of real APIs. 
+
 
 ## Description
 
