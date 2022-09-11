@@ -79,8 +79,7 @@ Protocol Network Service with default implementation in extension using generic 
 
 ## Authors
 
- Paul Matar
- [paul_matar](https://www.linkedin.com/in/paul-matar/)
+ [Paul Matar](https://www.linkedin.com/in/paul-matar/)
 
 
 
