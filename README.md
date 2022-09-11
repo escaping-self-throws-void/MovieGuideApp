@@ -50,7 +50,7 @@ MBC Movie Guide clone with english and arabic localizations. Browse upcoming mov
 ### Design Pattern
 
 * MVVM 
-* CleanSwift (other branch)
+* Coordinator
 
 ### Concepts
 
@@ -61,7 +61,9 @@ MBC Movie Guide clone with english and arabic localizations. Browse upcoming mov
 
 ### Dependencies
 
-* RxSwift (other branch)
+* RxSwift
+* SDWebImage
+* CountryPickerView
 
 ## In-depth 
 
@@ -69,24 +71,11 @@ MBC Movie Guide clone with english and arabic localizations. Browse upcoming mov
 
 Codable model used to decode from JSON.
 
-```Swift
-struct WeatherData: Codable {
-    let list: [List]
-    let city: City
-}
-...
-```
+
 ### Generic Async/Await Network Layer
 
 Protocol Network Service with default implementation in extension using generic type, URLSession and async/await, introduced in Swift 5.5.
 
-
-## RxSwift
-
-Second branch created to try RxSwift. 
-
-
-Succeeded to implement logic from main branch.
 
 ## Authors
 
@@ -102,4 +91,4 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Acknowledgments
 
 
-[Open Weather API](https://openweathermap.org)
+[MBC Movie Guide]((https://apps.apple.com/us/app/mbc-movie-guide/id508408034))
