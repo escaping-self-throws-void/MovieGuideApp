@@ -19,8 +19,8 @@ final class SignUpCoordinator: BaseCoordinator {
         viewController.viewModel = viewModel
         viewController.isModalInPresentation = false
         if let sheet = viewController.sheetPresentationController {
-            sheet.detents = [ .large(), .medium(), ]
-            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.detents = [ .large(), .medium()]
+            sheet.selectedDetentIdentifier = .large
             navigationController.present(viewController, animated: true)
         } else {
             viewController.modalPresentationStyle = .overCurrentContext
