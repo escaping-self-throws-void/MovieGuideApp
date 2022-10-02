@@ -26,18 +26,25 @@ final class SideMenuCoordinator: BaseCoordinator {
 
     func finish() {
         navigationController.dismiss(animated: false)
+        if navigationController.viewControllers.contains(where: { $0 is SettingsViewController }) {
+            navigationController.popViewController(animated: true)
+        }
         parentCoordinator?.didFinish(self)
     }
     
     func startLanding() {
-        navigationController.popToRootViewController(animated: true)
+        parentCoordinator?.parentCoordinator?.start()
+        finish()
     }
     
     func startSettings() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            let coordinator = SettingsCoordinator(navigationController: self.navigationController)
-            coordinator.delegate = self.delegate
-            coordinator.start()
-        }
+        let viewController = SettingsViewController.instantiate()
+        let viewModel = SettingsViewModel()
+        viewModel.coordinator = self
+        viewController.viewModel = viewModel
+        viewController.delegate = self.delegate
+        
+        navigationController.pushViewController(viewController, animated: false)
+        navigationController.dismiss(animated: false)
     }
 }

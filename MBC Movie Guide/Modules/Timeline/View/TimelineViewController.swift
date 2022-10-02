@@ -90,8 +90,14 @@ final class TimelineViewController: UIViewController {
         navBarDateLabel.translatesAutoresizingMaskIntoConstraints = false
         navBarTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        navBarTitleLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
-        navBarDateLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
+        if LanguageService.shared.isEn {
+            navBarTitleLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
+            navBarDateLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
+        } else {
+            navBarTitleLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
+            navBarDateLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
+        }
+        
         navBarTitleLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
         navBarDateLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
         

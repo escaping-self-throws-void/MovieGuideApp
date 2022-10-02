@@ -12,21 +12,21 @@ final class LanguageService {
     
     static let shared = LanguageService()
         
-    var isEn = NSLocale.current.languageCode == C.Lang.en ? true : false
+    var isEn = NSLocale.current.languageCode != C.Lang.ar
     
     private init() {}
     
-    func changeLanguage() {
+    func changeLanguage(_ appStart: Bool = false) {
         let lan = isEn ? C.Lang.en : C.Lang.ar
         Localize.setCurrentLanguage(lan)
         changeSemantics()
-        reloadApp()
+        reloadApp(appStart)
     }
     
-    private func reloadApp() {
+    private func reloadApp(_ appStart: Bool) {
         let appDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
-        let coord = AppCoordinator.init(window: appDelegate?.window ?? UIWindow())
-        coord.start()
+        let coord = AppCoordinator(window: appDelegate?.window ?? UIWindow())
+        appStart ? coord.start() : coord.startWithNewLanguage()
     }
     
     private func changeSemantics() {

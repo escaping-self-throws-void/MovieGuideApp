@@ -69,11 +69,10 @@
 		CFA61A22288A80A300ACB756 /* ReminderMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA61A1B288A80A300ACB756 /* ReminderMenuViewModel.swift */; };
 		CFA61A24288A80A300ACB756 /* ReminderMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA61A1D288A80A300ACB756 /* ReminderMenu.storyboard */; };
 		CFA61A2B288AC3D600ACB756 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA61A2A288AC3D600ACB756 /* CalendarService.swift */; };
-		CFA61A34288BE4F200ACB756 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA61A2D288BE4F200ACB756 /* SettingsCoordinator.swift */; };
 		CFA61A35288BE4F200ACB756 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA61A2E288BE4F200ACB756 /* SettingsViewController.swift */; };
 		CFA61A36288BE4F200ACB756 /* SettingsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA61A2F288BE4F200ACB756 /* SettingsUIModel.swift */; };
 		CFA61A37288BE4F200ACB756 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA61A30288BE4F200ACB756 /* SettingsViewModel.swift */; };
-		CFA61A39288BE4F200ACB756 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA61A32288BE4F200ACB756 /* Settings.storyboard */; };
+		CFA61A39288BE4F200ACB756 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA61A32288BE4F200ACB756 /* SettingsViewController.storyboard */; };
 		CFA61A40288C628B00ACB756 /* MBCSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA61A3F288C628B00ACB756 /* MBCSegmentedControl.swift */; };
 		CFA61A42288C639200ACB756 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA61A41288C639200ACB756 /* UIImage+Extensions.swift */; };
 		CFA7A9F02878049D001434F5 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA7A9EF2878049D001434F5 /* SignUpCoordinator.swift */; };
@@ -190,11 +189,10 @@
 		CFA61A1B288A80A300ACB756 /* ReminderMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderMenuViewModel.swift; sourceTree = "<group>"; };
 		CFA61A1D288A80A300ACB756 /* ReminderMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReminderMenu.storyboard; sourceTree = "<group>"; };
 		CFA61A2A288AC3D600ACB756 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
-		CFA61A2D288BE4F200ACB756 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		CFA61A2E288BE4F200ACB756 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CFA61A2F288BE4F200ACB756 /* SettingsUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUIModel.swift; sourceTree = "<group>"; };
 		CFA61A30288BE4F200ACB756 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		CFA61A32288BE4F200ACB756 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		CFA61A32288BE4F200ACB756 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		CFA61A3F288C628B00ACB756 /* MBCSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCSegmentedControl.swift; sourceTree = "<group>"; };
 		CFA61A41288C639200ACB756 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		CFA7A9EF2878049D001434F5 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
@@ -628,26 +626,17 @@
 		CFA61A2C288BE4C900ACB756 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				CFA61A3B288BE54200ACB756 /* Coordinator */,
 				CFA61A3D288BE56300ACB756 /* ViewModel */,
 				CFA61A3C288BE55400ACB756 /* View */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		CFA61A3B288BE54200ACB756 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				CFA61A2D288BE4F200ACB756 /* SettingsCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
 		CFA61A3C288BE55400ACB756 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				CFA61A2E288BE4F200ACB756 /* SettingsViewController.swift */,
-				CFA61A32288BE4F200ACB756 /* Settings.storyboard */,
+				CFA61A32288BE4F200ACB756 /* SettingsViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1082,7 +1071,7 @@
 				CFAEBA822889769E00C5E8CF /* heebo.extrabold.ttf in Resources */,
 				CF47AF9D2875C5A400ADED3D /* LandingViewController.storyboard in Resources */,
 				CFC330FB287611B3001A956C /* Almarai-ExtraBold.ttf in Resources */,
-				CFA61A39288BE4F200ACB756 /* Settings.storyboard in Resources */,
+				CFA61A39288BE4F200ACB756 /* SettingsViewController.storyboard in Resources */,
 				CFBFD75C2876B3E500D4BBBB /* SignUpViewController.storyboard in Resources */,
 				CFAEBA802889769E00C5E8CF /* heebo.thin.ttf in Resources */,
 				CF227BEF28CE553C00DB8E9F /* timeline16.json in Resources */,
@@ -1158,7 +1147,6 @@
 				CFA7AA0528789B62001434F5 /* SUMinorTableViewCell.swift in Sources */,
 				CFC8E96828774F7D006E33E6 /* AppCoordinator.swift in Sources */,
 				CFA61A35288BE4F200ACB756 /* SettingsViewController.swift in Sources */,
-				CFA61A34288BE4F200ACB756 /* SettingsCoordinator.swift in Sources */,
 				CFF39AD028815ABF00A7D428 /* BackgroundSupplementaryView.swift in Sources */,
 				CFA064D928883E7200379898 /* MovieDetailsHeaderReusableView.swift in Sources */,
 				CF8DD0CC2887E02D00A5ECFE /* MovieDetailsViewController.swift in Sources */,

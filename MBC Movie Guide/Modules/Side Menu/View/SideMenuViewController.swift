@@ -147,6 +147,6 @@ extension SideMenuViewController {
     private func openSettings() {
         viewModel.goToSettings()
         delegate?.handleDismiss()
-        viewModel.backToTimeline()
+//        viewModel.backToTimeline()
     }
 }

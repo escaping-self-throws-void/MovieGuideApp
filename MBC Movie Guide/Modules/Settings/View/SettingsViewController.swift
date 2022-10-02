@@ -24,12 +24,12 @@ final class SettingsViewController: UIViewController, UITableViewDelegate {
         let lbl = UILabel()
         lbl.text = C.LocKeys.settingsTitle.localized()
         lbl.font = UIFont(name: C.Fonts.almaraiExtraBold, size: 23)
-        lbl.textAlignment = .left
+        lbl.textAlignment = .center
         return lbl
     }()
     
     weak var delegate: SideMenuDelegate?
-    private var viewModel = SettingsViewModel()
+    var viewModel: SettingsViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,8 +76,15 @@ final class SettingsViewController: UIViewController, UITableViewDelegate {
         containerView.translatesAutoresizingMaskIntoConstraints = false
         navBarTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        navBarTitleLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: -10).isActive = true
-        navBarTitleLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor, constant: 1).isActive = true
+        let screenWidth = UIScreen.main.bounds.width
+        containerView.widthAnchor.constraint(equalToConstant: screenWidth * 0.73).isActive = true
+        
+        if LanguageService.shared.isEn {
+            navBarTitleLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
+        } else {
+            navBarTitleLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
+        }
+        navBarTitleLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
         
         navigationItem.titleView = containerView
     }
@@ -96,7 +103,7 @@ final class SettingsViewController: UIViewController, UITableViewDelegate {
 extension SettingsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.settingsModel?.rows.count ?? 0
+        viewModel.settingsModel?.rows.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -132,8 +139,7 @@ extension SettingsViewController: UITableViewDataSource {
 extension SettingsViewController {
     
     @objc private func burgerButtonTapped() {
-        let coordinator = SettingsCoordinator(navigationController: navigationController)
-        coordinator.stop()
+        viewModel.backToTimeline()
     }
     
     private func createSegControl() -> MBCSegmentedControl {

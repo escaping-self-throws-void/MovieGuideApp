@@ -25,4 +25,14 @@ final class AppCoordinator: BaseCoordinator {
         coordinator.navigationController = navigationController
         start(coordinator)
     }
+    
+    func startWithNewLanguage() {
+        navigationController = UINavigationController()
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
+        
+        let coordinator = TimelineCoordinator()
+        coordinator.navigationController = navigationController
+        start(coordinator)
+    }
 }
