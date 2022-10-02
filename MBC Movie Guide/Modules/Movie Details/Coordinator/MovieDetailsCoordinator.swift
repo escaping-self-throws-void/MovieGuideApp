@@ -15,7 +15,7 @@ private struct MovieDetailsStoryboard {
 }
 
 final class MovieDetailsCoordinator {
-    weak var viewController: MovieDetailsViewController?
+    var viewController: MovieDetailsViewController?
     
     private let navigationController: UINavigationController
     private let movieId: String

@@ -15,7 +15,7 @@ private struct ReminderMenuStoryboard {
 }
 
 final class ReminderMenuCoordinator {
-    weak var viewController: ReminderMenuViewController?
+    var viewController: ReminderMenuViewController?
     weak var delegate: ReminderMenuDelegate?
     private let navigationController: UINavigationController
 
