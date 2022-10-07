@@ -18,14 +18,14 @@ final class SignUpCoordinator: BaseCoordinator {
         viewModel.isLogin = isLogin
         viewController.viewModel = viewModel
         viewController.isModalInPresentation = false
-        if let sheet = viewController.sheetPresentationController {
-            sheet.detents = [ .large(), .medium()]
-            sheet.selectedDetentIdentifier = .large
-            navigationController.present(viewController, animated: true)
-        } else {
+//        if let sheet = viewController.sheetPresentationController {
+//            sheet.detents = [ .large(), .medium()]
+//            sheet.selectedDetentIdentifier = .large
+//            navigationController.present(viewController, animated: true)
+//        } else {
             viewController.modalPresentationStyle = .overCurrentContext
             navigationController.present(viewController, animated: true)
-        }
+//        }
     }
     
     func startWebView(with link: String) {

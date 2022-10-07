@@ -33,6 +33,11 @@
 		CF227BEF28CE553C00DB8E9F /* timeline16.json in Resources */ = {isa = PBXBuildFile; fileRef = CF227BEE28CE553C00DB8E9F /* timeline16.json */; };
 		CF227BF728CE567D00DB8E9F /* timeline17.json in Resources */ = {isa = PBXBuildFile; fileRef = CF227BF628CE567D00DB8E9F /* timeline17.json */; };
 		CF227BF928CE569500DB8E9F /* timeline18.json in Resources */ = {isa = PBXBuildFile; fileRef = CF227BF828CE569500DB8E9F /* timeline18.json */; };
+		CF2F9C2428F01CD30088AB0F /* MBCFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F9C2328F01CD30088AB0F /* MBCFormCell.swift */; };
+		CF2F9C2628F01F290088AB0F /* MBCDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F9C2528F01F290088AB0F /* MBCDatePicker.swift */; };
+		CF2F9C2928F0252B0088AB0F /* MGLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F9C2828F0252A0088AB0F /* MGLayout.swift */; };
+		CF2F9C2B28F029B00088AB0F /* MBCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F9C2A28F029B00088AB0F /* MBCTextField.swift */; };
+		CF2F9C2D28F04B540088AB0F /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F9C2C28F04B540088AB0F /* Optional+Extensions.swift */; };
 		CF47AF962875C5A400ADED3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47AF952875C5A400ADED3D /* AppDelegate.swift */; };
 		CF47AF982875C5A400ADED3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47AF972875C5A400ADED3D /* SceneDelegate.swift */; };
 		CF47AF9A2875C5A400ADED3D /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47AF992875C5A400ADED3D /* LandingViewController.swift */; };
@@ -152,6 +157,11 @@
 		CF227BEE28CE553C00DB8E9F /* timeline16.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline16.json; sourceTree = "<group>"; };
 		CF227BF628CE567D00DB8E9F /* timeline17.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline17.json; sourceTree = "<group>"; };
 		CF227BF828CE569500DB8E9F /* timeline18.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline18.json; sourceTree = "<group>"; };
+		CF2F9C2328F01CD30088AB0F /* MBCFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCFormCell.swift; sourceTree = "<group>"; };
+		CF2F9C2528F01F290088AB0F /* MBCDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCDatePicker.swift; sourceTree = "<group>"; };
+		CF2F9C2828F0252A0088AB0F /* MGLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGLayout.swift; sourceTree = "<group>"; };
+		CF2F9C2A28F029B00088AB0F /* MBCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCTextField.swift; sourceTree = "<group>"; };
+		CF2F9C2C28F04B540088AB0F /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
 		CF47AF922875C5A400ADED3D /* MBC Movie Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MBC Movie Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF47AF952875C5A400ADED3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF47AF972875C5A400ADED3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -351,6 +361,14 @@
 			path = MovieDetails;
 			sourceTree = "<group>";
 		};
+		CF2F9C2728F025000088AB0F /* AutoLayoutDSL */ = {
+			isa = PBXGroup;
+			children = (
+				CF2F9C2828F0252A0088AB0F /* MGLayout.swift */,
+			);
+			path = AutoLayoutDSL;
+			sourceTree = "<group>";
+		};
 		CF3FDC622883E65100E6D928 /* PopUp Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,7 +413,6 @@
 				CF47AFA92875D69600ADED3D /* Supporting Files */,
 				CFC8E96E28775495006E33E6 /* Extensions */,
 				CF601E27288589B900AA7E80 /* UIComponents */,
-				CFA7A9F3287850EB001434F5 /* Coordinator */,
 				CFC8E96D28775489006E33E6 /* Models */,
 				CFC8E963287726F1006E33E6 /* Modules */,
 				CFBFD7632876BFAC00D4BBBB /* Utils */,
@@ -439,18 +456,23 @@
 		CF601E27288589B900AA7E80 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				CF601E28288589CC00AA7E80 /* Atoms */,
+				CF2F9C2728F025000088AB0F /* AutoLayoutDSL */,
+				CF0B3082287EA87800C093BA /* Compositional Layout */,
+				CF601E28288589CC00AA7E80 /* Views */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
-		CF601E28288589CC00AA7E80 /* Atoms */ = {
+		CF601E28288589CC00AA7E80 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				CF601E29288589F000AA7E80 /* MBCImageView.swift */,
 				CFA61A3F288C628B00ACB756 /* MBCSegmentedControl.swift */,
+				CF2F9C2328F01CD30088AB0F /* MBCFormCell.swift */,
+				CF2F9C2528F01F290088AB0F /* MBCDatePicker.swift */,
+				CF2F9C2A28F029B00088AB0F /* MBCTextField.swift */,
 			);
-			path = Atoms;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CF601E45288596A100AA7E80 /* Side Menu */ = {
@@ -736,7 +758,7 @@
 		CFBFD7632876BFAC00D4BBBB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				CF0B3082287EA87800C093BA /* Compositional Layout */,
+				CFA7A9F3287850EB001434F5 /* Coordinator */,
 				CFC8E9532876FFCC006E33E6 /* Localization */,
 				CFBCD64E287C2AFE00D9EA0D /* Constants */,
 			);
@@ -877,6 +899,7 @@
 				CF8EB6652883313F00D8F616 /* Date+Extensions.swift */,
 				CFA61A41288C639200ACB756 /* UIImage+Extensions.swift */,
 				CFD51CD9288D7C2E00F14A03 /* NSTextAlignment+Extensions.swift */,
+				CF2F9C2C28F04B540088AB0F /* Optional+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1015,7 +1038,7 @@
 			);
 			mainGroup = CF47AF892875C5A400ADED3D;
 			packageReferences = (
-				CFD51CD6288D66B200F14A03 /* XCRemoteSwiftPackageReference "Localize-Swift.git" */,
+				CFD51CD6288D66B200F14A03 /* XCRemoteSwiftPackageReference "Localize-Swift" */,
 			);
 			productRefGroup = CF47AF932875C5A400ADED3D /* Products */;
 			projectDirPath = "";
@@ -1144,9 +1167,11 @@
 				CFA61A42288C639200ACB756 /* UIImage+Extensions.swift in Sources */,
 				CF0B308E287EB32200C093BA /* NetworkService.swift in Sources */,
 				CF0B307C287E9E5D00C093BA /* TimelineViewModel.swift in Sources */,
+				CF2F9C2428F01CD30088AB0F /* MBCFormCell.swift in Sources */,
 				CFA7AA0528789B62001434F5 /* SUMinorTableViewCell.swift in Sources */,
 				CFC8E96828774F7D006E33E6 /* AppCoordinator.swift in Sources */,
 				CFA61A35288BE4F200ACB756 /* SettingsViewController.swift in Sources */,
+				CF2F9C2928F0252B0088AB0F /* MGLayout.swift in Sources */,
 				CFF39AD028815ABF00A7D428 /* BackgroundSupplementaryView.swift in Sources */,
 				CFA064D928883E7200379898 /* MovieDetailsHeaderReusableView.swift in Sources */,
 				CF8DD0CC2887E02D00A5ECFE /* MovieDetailsViewController.swift in Sources */,
@@ -1154,6 +1179,7 @@
 				CFF39AD2288165EF00A7D428 /* SectionHeaderReusableView.swift in Sources */,
 				CF8DD0CB2887E02D00A5ECFE /* MovieDetailsCoordinator.swift in Sources */,
 				CF94F9DC28802F1200FFF16A /* MBCCollectionView.swift in Sources */,
+				CF2F9C2D28F04B540088AB0F /* Optional+Extensions.swift in Sources */,
 				CF601E262884026C00AA7E80 /* LanguageService.swift in Sources */,
 				CF47AF9A2875C5A400ADED3D /* LandingViewController.swift in Sources */,
 				CF8DD0DE2887E89300A5ECFE /* MovieDetailsCollectionView.swift in Sources */,
@@ -1177,6 +1203,7 @@
 				CF11BCE9287D9F380052A1DF /* String+Extensions.swift in Sources */,
 				CF7006E628871B7700D8F374 /* SideMenuCoordinator.swift in Sources */,
 				CFAEBA7228896AFF00C5E8CF /* SynopsisCollectionViewCell.swift in Sources */,
+				CF2F9C2B28F029B00088AB0F /* MBCTextField.swift in Sources */,
 				CF94F9E1288041B700FFF16A /* TimelineMovieCell.swift in Sources */,
 				CFBFD7602876B43400D4BBBB /* SignUpViewModel.swift in Sources */,
 				CFF39AD92883169300A7D428 /* PopUpViewController.swift in Sources */,
@@ -1188,6 +1215,7 @@
 				CFD51CDA288D7C2E00F14A03 /* NSTextAlignment+Extensions.swift in Sources */,
 				CFA7A9F02878049D001434F5 /* SignUpCoordinator.swift in Sources */,
 				CFF39AD62881F93E00A7D428 /* UIView+Extensions.swift in Sources */,
+				CF2F9C2628F01F290088AB0F /* MBCDatePicker.swift in Sources */,
 				CFA61A2B288AC3D600ACB756 /* CalendarService.swift in Sources */,
 				CF0B3084287EA89300C093BA /* CompositionalLayout.swift in Sources */,
 				CFBCD64B287C15C900D9EA0D /* WebViewController.swift in Sources */,
@@ -1362,7 +1390,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1393,7 +1421,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1431,7 +1459,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CFD51CD6288D66B200F14A03 /* XCRemoteSwiftPackageReference "Localize-Swift.git" */ = {
+		CFD51CD6288D66B200F14A03 /* XCRemoteSwiftPackageReference "Localize-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/marmelroy/Localize-Swift.git";
 			requirement = {
@@ -1444,7 +1472,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		CFD51CD7288D66B200F14A03 /* Localize_Swift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CFD51CD6288D66B200F14A03 /* XCRemoteSwiftPackageReference "Localize-Swift.git" */;
+			package = CFD51CD6288D66B200F14A03 /* XCRemoteSwiftPackageReference "Localize-Swift" */;
 			productName = Localize_Swift;
 		};
 /* End XCSwiftPackageProductDependency section */
