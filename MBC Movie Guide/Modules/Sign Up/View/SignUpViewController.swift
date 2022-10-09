@@ -247,38 +247,35 @@ extension SignUpViewController {
             
             return cell
         case 7:
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: SUMinorTableViewCell.reuseIdentifier, for: indexPath) as? SUMinorTableViewCell else {
-//                return UITableViewCell()
-//            }
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SUMinorTableViewCell.reuseIdentifier, for: indexPath) as? SUMinorTableViewCell else {
                 return UITableViewCell()
             }
             
-//            cell.style = .termsCheck
-//
-//            cell.termsCheck.rx.tap.observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell, weak self] in
-//                guard let cell = cell, let self = self else { return }
-//                self.viewModel.termsAccepted.toggle()
-//                self.viewModel.userTermsAccepted
-//                    .map { $0 ? UIImage(named: C.Images.check) : UIImage(named: C.Images.circle) }
-//                    .bind(to: cell.termsCheck.rx.image())
-//                    .disposed(by: self.disposeBag)
-//            }).disposed(by: disposeBag)
-//
-//            cell.adsCheck.rx.tap.observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell, weak self] in
-//                guard let cell = cell, let self = self else { return }
-//                self.viewModel.adsAccepted.toggle()
-//                self.viewModel.userAdsAccepted
-//                    .map { $0 ? UIImage(named: C.Images.check) : UIImage(named: C.Images.circle) }
-//                    .bind(to: cell.adsCheck.rx.image())
-//                    .disposed(by: self.disposeBag)
-//            }).disposed(by: disposeBag)
-//
-//            cell.acceptTermsButton.rx.tap.observe(on: MainScheduler.instance)
-//                .subscribe(onNext: { [weak self] in
-//                    guard let self = self else { return }
-//                    self.viewModel.acceptTermsTapped()
-//                }).disposed(by: disposeBag)
+            cell.style = .termsCheck
+
+            cell.termsCheck.rx.tap.observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell, weak self] in
+                guard let cell = cell, let self = self else { return }
+                self.viewModel.termsAccepted.toggle()
+                self.viewModel.userTermsAccepted
+                    .map { $0 ? UIImage(named: C.Images.check) : UIImage(named: C.Images.circle) }
+                    .bind(to: cell.termsCheck.rx.image())
+                    .disposed(by: self.disposeBag)
+            }).disposed(by: disposeBag)
+
+            cell.adsCheck.rx.tap.observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell, weak self] in
+                guard let cell = cell, let self = self else { return }
+                self.viewModel.adsAccepted.toggle()
+                self.viewModel.userAdsAccepted
+                    .map { $0 ? UIImage(named: C.Images.check) : UIImage(named: C.Images.circle) }
+                    .bind(to: cell.adsCheck.rx.image())
+                    .disposed(by: self.disposeBag)
+            }).disposed(by: disposeBag)
+
+            cell.acceptTermsButton.rx.tap.observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [weak self] in
+                    guard let self = self else { return }
+                    self.viewModel.acceptTermsTapped()
+                }).disposed(by: disposeBag)
             
             return cell
         default:
@@ -308,8 +305,11 @@ extension SignUpViewController {
         
         switch indexPath.row {
         case 0:
-            cell.style = .email
-            cell.signUpCellTextField.rx.text.compactMap { $0 }.bind(to: viewModel.loginEmail).disposed(by: disposeBag)
+//            cell.style = .email
+//            cell.signUpCellTextField.rx.text.compactMap { $0 }.bind(to: viewModel.loginEmail).disposed(by: disposeBag)
+//            return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
+            
             return cell
         case 1:
             cell.style = .logInPassword

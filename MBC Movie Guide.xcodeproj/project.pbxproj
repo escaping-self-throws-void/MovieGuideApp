@@ -468,9 +468,9 @@
 			children = (
 				CF601E29288589F000AA7E80 /* MBCImageView.swift */,
 				CFA61A3F288C628B00ACB756 /* MBCSegmentedControl.swift */,
-				CF2F9C2328F01CD30088AB0F /* MBCFormCell.swift */,
 				CF2F9C2528F01F290088AB0F /* MBCDatePicker.swift */,
 				CF2F9C2A28F029B00088AB0F /* MBCTextField.swift */,
+				CF2F9C2328F01CD30088AB0F /* MBCFormCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

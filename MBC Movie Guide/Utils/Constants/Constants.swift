@@ -22,6 +22,7 @@ enum C {
         static let lightPeriwinkle = "#lightPeriwinkle"
         static let greyishBrownThree = "#greyishBrownThree"
         static let warmGrey = "#warmGrey"
+        static let veryLightPink = "#veryLightPink"
         static let veryLightPinkThree = "#veryLightPinkThree"
         static let darkishBlue = "#darkishBlue"
         static let navy = "#navy"

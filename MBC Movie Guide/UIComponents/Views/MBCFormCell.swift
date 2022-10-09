@@ -10,16 +10,12 @@ import UIKit
 final class MBCFormCell: UITableViewCell {
     
     let textField: MBCTextField = {
-        let tf = MBCTextField()
-        tf.placeholder = "Test"
-        tf.backgroundColor = .clear
-        
+        let tf = MBCTextField("Email")
         return tf
     }()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
     
     override func layoutSubviews() {
