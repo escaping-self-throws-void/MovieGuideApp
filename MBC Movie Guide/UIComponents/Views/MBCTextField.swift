@@ -11,6 +11,9 @@ final class MBCTextField: UITextField {
     
     lazy var floatingLabel: UILabel = {
         let label = UILabel()
+        label.backgroundColor = .clear
+        label.layer.zPosition = 1
+        label.textAlignment = .center
         label.font = .init(name: C.Fonts.almaraiRegular, size: 15)
         label.textColor = .init(named: C.Colors.veryLightPink)?.withAlphaComponent(0.5)
         return label
@@ -42,6 +45,12 @@ final class MBCTextField: UITextField {
         bindFloatingLabel()
     }
     
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        bezier()
+//        addBorder(borderWidth: 1, borderColor: UIColor(named: C.Colors.brownishGreyTwo).unwrap)
+    }
+    
     convenience init(_ placeholder: String) {
         self.init()
         floatingLabel.text = placeholder
@@ -55,17 +64,11 @@ final class MBCTextField: UITextField {
         backgroundColor = .clear
         textAlignment = .defaultAlignment
         font = .init(name: C.Fonts.almaraiRegular, size: 15)
-        
-//        layer.cornerRadius = 4
-//        layer.borderWidth = 1
-//        layer.borderColor = UIColor(named: C.Colors.brownishGreyTwo).unwrap.cgColor
-        clipsToBounds = false
 
-        addBorders(with: UIColor(named: C.Colors.brownishGreyTwo), borderWidth: 1)
-        
         floatingLabel.place(on: self).pin(
             .centerY(),
-            .leading(to: self, padding: 7)
+            .leading(to: self, padding: 7),
+            .fixedWidth(50)
         )
         
         bringSubviewToFront(floatingLabel)
@@ -110,46 +113,17 @@ final class MBCTextField: UITextField {
         }
     }
     
-    
-    func addBorders(with color: UIColor?, borderWidth: CGFloat) {
-        addTopBorder(with: color, andWidth: borderWidth)
-        addBottomBorder(with: color, andWidth: borderWidth)
-        addLeftBorder(with: color, andWidth: borderWidth)
-        addRightBorder(with: color, andWidth: borderWidth)
-    }
-    
-    
-    
-    func addTopBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
-        let border = UIView()
-        border.backgroundColor = color
-        border.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
-        border.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: borderWidth)
-        addSubview(border)
-    }
-
-    func addBottomBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
-        let border = UIView()
-        border.backgroundColor = color
-        border.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
-        border.frame = CGRect(x: 0, y: frame.size.height - borderWidth, width: frame.size.width, height: borderWidth)
-        addSubview(border)
-    }
-
-    func addLeftBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
-        let border = UIView()
-        border.backgroundColor = color
-        border.frame = CGRect(x: 0, y: 0, width: borderWidth, height: frame.size.height)
-        border.autoresizingMask = [.flexibleHeight, .flexibleRightMargin]
-        addSubview(border)
-    }
-
-    func addRightBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
-        let border = UIView()
-        border.backgroundColor = color
-        border.autoresizingMask = [.flexibleHeight, .flexibleLeftMargin]
-        border.frame = CGRect(x: frame.size.width - borderWidth, y: 0, width: borderWidth, height: frame.size.height)
-        addSubview(border)
+    func bezier() {
+        let path = UIBezierPath(roundedRect: bounds, cornerRadius: 4).cgPath
+        
+        let borderLayer = CAShapeLayer()
+        
+        borderLayer.path = path
+        borderLayer.lineWidth = 1
+        borderLayer.strokeColor = UIColor(named: C.Colors.brownishGreyTwo).unwrap.cgColor
+        
+        borderLayer.fillColor = UIColor.clear.cgColor
+        layer.addSublayer(borderLayer)
     }
 
 }
