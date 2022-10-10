@@ -47,8 +47,7 @@ final class MBCTextField: UITextField {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        bezier()
-//        addBorder(borderWidth: 1, borderColor: UIColor(named: C.Colors.brownishGreyTwo).unwrap)
+        drawBezierPath()
     }
     
     convenience init(_ placeholder: String) {
@@ -85,7 +84,7 @@ final class MBCTextField: UITextField {
             delay: 0,
             options: .curveEaseInOut,
             animations: { [weak self] in
-                guard let self else { return }
+                guard let self = self else { return }
                 if isUp {
                     let offsetX = self.floatingLabel.frame.width * 0.1
                     let translation = CGAffineTransform(translationX: -offsetX + 7, y: -self.frame.height/1.5)
@@ -113,7 +112,7 @@ final class MBCTextField: UITextField {
         }
     }
     
-    func bezier() {
+    private func drawBezierPath() {
         let path = UIBezierPath(roundedRect: bounds, cornerRadius: 4).cgPath
         
         let borderLayer = CAShapeLayer()
