@@ -22,9 +22,9 @@ extension Constraint {
     static let height: Constraint = .height()
     static let centerX: Constraint = .centerX()
     static let centerY: Constraint = .centerY()
-    static let verticalEdges: Constraint = . verticalEdges()
-    static let horizontalEdges: Constraint = . horizontalEdges()
-    static let allEdges: Constraint = . allEdges()
+    static let verticalEdges: Constraint = .verticalEdges()
+    static let horizontalEdges: Constraint = .horizontalEdges()
+    static let allEdges: Constraint = .allEdges()
     
     static func top(to anchors: Anchorable? = nil, padding:  CGFloat = 0) -> Constraint {
         .relative(.top, padding, to: anchors)
@@ -115,7 +115,7 @@ extension UIView {
             case .relative(let attribute, let constant, let toItem, let toAttribute):
                 NSLayoutConstraint(item: self,
                                    attribute: attribute,
-                                   toItem: toItem ?? self.superview!,
+                                   toItem: toItem ?? superview,
                                    toAttribute: toAttribute ?? attribute,
                                    constant: constant).isActive = true
             case .fixed(let attribute, let constant):
@@ -143,6 +143,7 @@ protocol Anchorable {
 }
 
 extension UIView: Anchorable { }
+
 extension UILayoutGuide: Anchorable {
     var firstBaselineAnchor: NSLayoutYAxisAnchor {
         preconditionFailure("UILayoutGuide does not support firstBaselineAnchor")
