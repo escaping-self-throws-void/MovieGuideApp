@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RxSwift
 
 final class MBCTextField: UITextField {
     
-    lazy var floatingLabel: UILabel = {
+    // MARK: - Outlets
+    
+    private lazy var floatingLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
         label.textAlignment = .defaultAlignment
@@ -18,14 +21,15 @@ final class MBCTextField: UITextField {
         return label
     }()
     
-    private var isUp: Bool = false {
-        didSet {
-            animateBorders(isUp)
-            moveLabel(isUp)
-        }
-    }
-    
-    private let padding: CGFloat = 7
+    private lazy var errorLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .clear
+        label.textAlignment = .defaultAlignment
+        label.font = .init(name: C.Fonts.almaraiRegular, size: 8)
+        label.textColor = .init(named: C.Colors.dustyRed)
+        label.isHidden = true
+        return label
+    }()
 
     private lazy var defaultPath: UIBezierPath = {
         let path = UIBezierPath()
@@ -45,12 +49,13 @@ final class MBCTextField: UITextField {
         let path = UIBezierPath()
         let radius: CGFloat = 4
 
+        let minXOffset = floatingLabel.frame.width * 0.02
+        let maxXOffset = floatingLabel.frame.maxX - (floatingLabel.frame.width * 0.18)
+        
         path.move(to: CGPoint(x: 0, y: bounds.height - radius))
         path.addArc(withCenter: CGPoint(x: radius, y: radius), radius: radius, startAngle: CGFloat.pi, endAngle: CGFloat.pi * 3 / 2, clockwise: true)
-        let minXOffset = floatingLabel.frame.width * 0.02
-        path.addLine(to: .init(x: padding + minXOffset - 3, y: 0))
+        path.addLine(to: .init(x: LanguageService.shared.isEn ? (padding + minXOffset - 3) : (maxXOffset + 3) - (floatingLabel.frame.width - minXOffset) + 3, y: 0))
         path.addClip()
-        let maxXOffset = floatingLabel.frame.maxX - (floatingLabel.frame.width * 0.18)
         path.move(to: .init(x: maxXOffset + 3, y: 0))
         path.addArc(withCenter: CGPoint(x: bounds.width - radius, y: radius), radius: radius, startAngle: CGFloat.pi * 3 / 2, endAngle: 0, clockwise: true)
         path.addArc(withCenter: CGPoint(x: bounds.width - radius, y: bounds.height - radius), radius: radius, startAngle: 0, endAngle: .pi / 2, clockwise: true)
@@ -70,6 +75,19 @@ final class MBCTextField: UITextField {
         return borderLayer
     }()
     
+    // MARK: - Properties
+    
+    private var isUp: Bool = false {
+        didSet {
+            animateBorders(isUp)
+            moveLabel(isUp)
+        }
+    }
+    
+    private let padding: CGFloat = 7
+    
+    // MARK: - Super methods
+    
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         bounds.inset(by: .init(top: 0, left: padding, bottom: 0, right: padding))
     }
@@ -82,6 +100,32 @@ final class MBCTextField: UITextField {
         bounds.inset(by: .init(top: 0, left: padding, bottom: 0, right: padding))
     }
     
+    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+        var rect = super.rightViewRect(forBounds: bounds)
+        rect.origin.x -= 10
+
+        return rect
+    }
+    
+    override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
+        var rect = super.leftViewRect(forBounds: bounds)
+        rect.origin.x += 10
+
+        return rect
+    }
+
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        layer.addSublayer(borderLayer)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        pinSubviews()
+    }
+    
+    // MARK: - Initialization
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         createUI()
@@ -91,25 +135,45 @@ final class MBCTextField: UITextField {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        layer.addSublayer(borderLayer)
+    
+    // MARK: - Public methods
+    
+    func configure(placeholder: String, errorMessage: String?) {
+        floatingLabel.text = placeholder
+        errorLabel.text = errorMessage
     }
     
-    convenience init(_ placeholder: String) {
-        self.init()
-        floatingLabel.text = placeholder
+    func showError(_ isValid: Bool) {
+        let color = isValid ? UIColor(named: C.Colors.brownishGreyTwo)
+                            : UIColor(named: C.Colors.dustyRed)
+        errorLabel.isHidden = isValid
+        borderLayer.strokeColor = color.unwrap.cgColor
+        floatingLabel.textColor = color
     }
+    
+    // MARK: - Private methods
     
     private func createUI() {
         backgroundColor = .clear
         textAlignment = .defaultAlignment
         font = .init(name: C.Fonts.almaraiRegular, size: 15)
-
+    }
+    
+    // TODO: Finish implementation
+    private func addAccessoryView(_ view: UIView) {
+        rightView = view
+        rightViewMode = .always
+    }
+    
+    private func pinSubviews() {
         floatingLabel.place(on: self).pin(
             .centerY(),
             .leading(to: self, padding: padding)
+        )
+        
+        errorLabel.place(on: self).pin(
+            .bottom(to: self, padding: -12),
+            .leading(to: self)
         )
     }
     
@@ -117,6 +181,8 @@ final class MBCTextField: UITextField {
         addTarget(self, action: #selector(startFloating), for: .editingDidBegin)
         addTarget(self, action: #selector(endFloating), for: .editingDidEnd)
     }
+    
+    // MARK: - Animations
     
     private func moveLabel(_ isUp: Bool) {
         UIView.animate(
@@ -148,15 +214,13 @@ final class MBCTextField: UITextField {
         borderLayer.add(animation, forKey: "path")
     }
     
-    @objc
-    private func startFloating() {
+    @objc private func startFloating() {
         if !isUp {
             isUp.toggle()
         }
     }
     
-    @objc
-    private func endFloating() {
+    @objc private func endFloating() {
         if isUp && text.isEmptyOrNil {
             isUp.toggle()
         }

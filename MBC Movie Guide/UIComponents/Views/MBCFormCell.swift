@@ -6,17 +6,14 @@
 //
 
 import UIKit
+import RxSwift
 
 final class MBCFormCell: UITableViewCell {
     
-    let textField: MBCTextField = {
-        let tf = MBCTextField("Email")
+    lazy var textField: MBCTextField = {
+        let tf = MBCTextField()
         return tf
     }()
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -36,5 +33,12 @@ final class MBCFormCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(as type: FormType) {
+        textField.configure(
+            placeholder: type.placeholder,
+            errorMessage: type.errorMessage
+        )
     }
 }

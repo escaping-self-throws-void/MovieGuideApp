@@ -37,7 +37,7 @@ final class SignUpViewController: UIViewController {
     }
     
     private func setupUI() {
-        signUpTableView.rowHeight = 60
+        signUpTableView.rowHeight = 65
         signUpTableView.layer.cornerRadius = 17
         signUpTableView.layer.borderWidth = 1
         signUpTableView.layer.borderColor = (UIColor(named: C.Colors.dark) ?? .black).cgColor
@@ -140,7 +140,7 @@ extension SignUpViewController {
                     .observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell] text in
                         guard let cell = cell else { return }
                         if text != "" {
-                            text.isValid(.name)
+                            text.validate(by: .name)
                             ? cell.showNameError(false) : cell.showNameError(true)
                         }
                     }).disposed(by: disposeBag)
@@ -151,7 +151,7 @@ extension SignUpViewController {
                     .observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell] text in
                         guard let cell = cell else { return }
                         if text != "" {
-                            text.isValid(.name)
+                            text.validate(by: .name)
                             ? cell.showLastNameError(false) : cell.showLastNameError(true)
                         }
                     }).disposed(by: disposeBag)
@@ -165,7 +165,7 @@ extension SignUpViewController {
                 .observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell] text in
                     guard let cell = cell else { return }
                     if text != "" {
-                        text.isValid(.email)
+                        text.validate(by: .email)
                         ? cell.showError(false) : cell.showError(true)
                     }
                 }).disposed(by: disposeBag)
@@ -186,11 +186,13 @@ extension SignUpViewController {
                     cell.signUpCellTextField.isSecureTextEntry = cell.isSecure
                 }).disposed(by: disposeBag)
             
-            cell.signUpCellTextField.rx.text.compactMap { $0 }
+            cell.signUpCellTextField.rx.text
+                .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+                .compactMap { $0 }
                 .observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell] text in
                     guard let cell = cell else { return }
                     if text != "" {
-                        text.isValid(.password)
+                        text.validate(by: .password)
                         ? cell.showError(false) : cell.showError(true)
                     }
                 }).disposed(by: disposeBag)
@@ -215,7 +217,7 @@ extension SignUpViewController {
                 .observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell] text in
                     guard let cell = cell else { return }
                     if text != "" {
-                        text.isValid(.password)
+                        text.validate(by: .password)
                         ? cell.showError(false) : cell.showError(true)
                     }
                 }).disposed(by: disposeBag)
@@ -305,15 +307,43 @@ extension SignUpViewController {
         
         switch indexPath.row {
         case 0:
-//            cell.style = .email
-//            cell.signUpCellTextField.rx.text.compactMap { $0 }.bind(to: viewModel.loginEmail).disposed(by: disposeBag)
-//            return cell
             let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
+            
+            cell.configure(as: .email)
+            
+            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.loginEmail).disposed(by: disposeBag)
+            
+//            cell.textField.rx.text
+//                .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+//                .compactMap { $0 }
+//                .subscribe(onNext: { [weak cell] text in
+//                    guard let cell = cell else { return }
+//                    if text != "" {
+//                        let isValid = text.validate(by: .email)
+//                        cell.textField.showError(isValid)
+//                    }
+//                })
+//                .disposed(by: disposeBag)
             
             return cell
         case 1:
-            cell.style = .logInPassword
-            cell.signUpCellTextField.rx.text.compactMap { $0 }.bind(to: viewModel.loginPassword).disposed(by: disposeBag)
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
+            
+            cell.configure(as: .password)
+            
+            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.loginPassword).disposed(by: disposeBag)
+            
+            cell.textField.rx.text
+                .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
+                .compactMap { $0 }
+                .subscribe(onNext: { [weak cell] text in
+                    guard let cell = cell else { return }
+                    if text != "" {
+                        let isValid = text.validate(by: .password)
+                        cell.textField.showError(isValid)
+                    }
+                })
+                .disposed(by: disposeBag)
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SUMinorTableViewCell.reuseIdentifier, for: indexPath) as? SUMinorTableViewCell else { return UITableViewCell() }

@@ -7,27 +7,18 @@
 
 import Foundation
 
-enum RegexType {
-    case name
-    case email
-    case password
+enum RegexType: String {
+    case name = "^^[a-zA-Z]+[\\-\\'\\s]?[a-zA-Z ]{1,40}$"
+    case email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    //    Length 8 to 16.
+    //    One Alphabet in Password.
+    //    One Special Character in Password.
+    case password = "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,16}"
 }
 
 extension String {
-    func isValid(_ type: RegexType) -> Bool {
-        let format = "SELF MATCHES %@"
-        var regex = "[^!]"
-        
-        switch type {
-        case .name: regex = "^^[a-zA-Z]+[\\-\\'\\s]?[a-zA-Z ]{1,40}$"
-        case .email: regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-            //    Length 8 to 16.
-            //    One Alphabet in Password.
-            //    One Special Character in Password.
-        case .password: regex = "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,16}"
-        }
-        
-        return NSPredicate(format: format, regex)
+    func validate(by type: RegexType) -> Bool {
+        NSPredicate(format: "SELF MATCHES %@", type.rawValue)
             .evaluate(with: self.trimmingCharacters(in: .whitespaces))
     }
     

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -120,7 +121,7 @@
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="mlG-C9-ajx">
-                        <rect key="frame" x="67.5" y="0.0" width="193" height="28"/>
+                        <rect key="frame" x="67.5" y="10" width="193" height="28"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="26g-DX-p6z">
                                 <rect key="frame" x="0.0" y="0.0" width="193" height="11.5"/>
@@ -182,7 +183,7 @@
                     <constraint firstItem="RcE-y4-ibS" firstAttribute="baseline" secondItem="kKp-4r-4D6" secondAttribute="firstBaseline" constant="21" id="jIR-Y7-ovi"/>
                     <constraint firstItem="RcE-y4-ibS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oqI-2R-YOv"/>
                     <constraint firstItem="RcE-y4-ibS" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="w1K-Ah-6wT"/>
-                    <constraint firstItem="mlG-C9-ajx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zcy-Jz-eSl"/>
+                    <constraint firstItem="mlG-C9-ajx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="zcy-Jz-eSl"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

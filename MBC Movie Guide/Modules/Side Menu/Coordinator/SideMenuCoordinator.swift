@@ -33,7 +33,11 @@ final class SideMenuCoordinator: BaseCoordinator {
     }
     
     func startLanding() {
-        parentCoordinator?.parentCoordinator?.start()
+        if UserSession.shared.isGuest {
+            parentCoordinator?.parentCoordinator?.start()
+        } else {
+            navigationController.popToRootViewController(animated: true)
+        }
         finish()
     }
     
