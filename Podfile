@@ -9,6 +9,7 @@ target 'MBC Movie Guide' do
 
     pod 'RxSwift'
     pod 'RxCocoa'
+    pod "RxGesture"
     pod 'CountryPickerView', :inhibit_warnings => true
     pod 'SDWebImage'
 end

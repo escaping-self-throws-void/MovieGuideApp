@@ -8,12 +8,27 @@
 import Foundation
 
 enum RegexType: String {
-    case name = "^^[a-zA-Z]+[\\-\\'\\s]?[a-zA-Z ]{1,40}$"
+    case name, lastName = "^^[a-zA-Z]+[\\-\\'\\s]?[a-zA-Z ]{1,40}$"
     case email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
     //    Length 8 to 16.
     //    One Alphabet in Password.
     //    One Special Character in Password.
-    case password = "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,16}"
+    case password, confirm = "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,16}"
+    
+    var errorMessage: String? {
+        switch self {
+        case .name:
+            return C.LocKeys.sUNameErrorLbl.localized()
+        case .lastName:
+            return C.LocKeys.sULastNameErrorLbl.localized()
+        case .email:
+            return C.LocKeys.sUEmailErrorLbl.localized()
+        case .password:
+            return C.LocKeys.sUPasswordErrorLb.localized()
+        case .confirm:
+            return C.LocKeys.sUConfirmErrorLbl.localized()
+        }
+    }
 }
 
 extension String {

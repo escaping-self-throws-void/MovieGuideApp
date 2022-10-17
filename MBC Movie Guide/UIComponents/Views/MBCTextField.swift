@@ -138,17 +138,25 @@ final class MBCTextField: UITextField {
     
     // MARK: - Public methods
     
-    func configure(placeholder: String, errorMessage: String?) {
+    func configure(placeholder: String) {
         floatingLabel.text = placeholder
-        errorLabel.text = errorMessage
     }
     
-    func showError(_ isValid: Bool) {
+    func validate(text: String, as regex: RegexType?) {
+        guard let regex, !text.isEmpty else { return }
+        let isValid = text.validate(by: regex)
         let color = isValid ? UIColor(named: C.Colors.brownishGreyTwo)
                             : UIColor(named: C.Colors.dustyRed)
         errorLabel.isHidden = isValid
+        errorLabel.text = regex.errorMessage
         borderLayer.strokeColor = color.unwrap.cgColor
         floatingLabel.textColor = color
+    }
+    
+    // TODO: Finish implementation
+    func addAccessoryView(_ view: UIView?) {
+        rightView = view
+        rightViewMode = .always
     }
     
     // MARK: - Private methods
@@ -157,12 +165,6 @@ final class MBCTextField: UITextField {
         backgroundColor = .clear
         textAlignment = .defaultAlignment
         font = .init(name: C.Fonts.almaraiRegular, size: 15)
-    }
-    
-    // TODO: Finish implementation
-    private func addAccessoryView(_ view: UIView) {
-        rightView = view
-        rightViewMode = .always
     }
     
     private func pinSubviews() {

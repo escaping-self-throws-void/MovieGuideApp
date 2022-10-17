@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxGesture
 
 final class SignUpViewController: UIViewController {
     
@@ -313,37 +314,19 @@ extension SignUpViewController {
             
             cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.loginEmail).disposed(by: disposeBag)
             
-//            cell.textField.rx.text
-//                .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-//                .compactMap { $0 }
-//                .subscribe(onNext: { [weak cell] text in
-//                    guard let cell = cell else { return }
-//                    if text != "" {
-//                        let isValid = text.validate(by: .email)
-//                        cell.textField.showError(isValid)
-//                    }
-//                })
-//                .disposed(by: disposeBag)
-            
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
             
-            cell.configure(as: .password)
-            
-            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.loginPassword).disposed(by: disposeBag)
-            
-            cell.textField.rx.text
-                .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-                .compactMap { $0 }
-                .subscribe(onNext: { [weak cell] text in
-                    guard let cell = cell else { return }
-                    if text != "" {
-                        let isValid = text.validate(by: .password)
-                        cell.textField.showError(isValid)
-                    }
+            cell.configure(as: .loginPassword)
+            cell.textField.rightView?.rx
+                .tapGesture()
+                .when(.recognized)
+                .subscribe(onNext: { [weak self] _ in
+                    print("Das")
                 })
-                .disposed(by: disposeBag)
+            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.loginPassword).disposed(by: disposeBag)
+
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SUMinorTableViewCell.reuseIdentifier, for: indexPath) as? SUMinorTableViewCell else { return UITableViewCell() }
