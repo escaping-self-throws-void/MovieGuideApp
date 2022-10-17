@@ -33,7 +33,13 @@ final class SideMenuCoordinator: BaseCoordinator {
     }
     
     func startLanding() {
-        parentCoordinator?.parentCoordinator?.start()
+        if let coordinator = parentCoordinator?.parentCoordinator as? LandingCoordinator {
+            coordinator.start()
+        } else {
+            let coordinator = LandingCoordinator()
+            coordinator.navigationController = navigationController
+            start(coordinator)
+        }
         finish()
     }
     
