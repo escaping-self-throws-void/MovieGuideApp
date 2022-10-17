@@ -23,7 +23,6 @@ final class SideMenuViewModel {
     
     func goToLanding() {
         coordinator?.startLanding()
-        coordinator?.finish()
     }
     
     func goToSettings() {
