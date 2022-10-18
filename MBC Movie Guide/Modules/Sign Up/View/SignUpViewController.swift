@@ -81,7 +81,8 @@ final class SignUpViewController: UIViewController {
         
         let minorNib = UINib(nibName: SUMinorTableViewCell.reuseIdentifier, bundle: nil)
         signUpTableView.register(minorNib, forCellReuseIdentifier: SUMinorTableViewCell.reuseIdentifier)
-        signUpTableView.register(MBCFormCell.self, forCellReuseIdentifier: MBCFormCell.reuseIdentifier)
+        signUpTableView.register(MBCTextFormCell.self, forCellReuseIdentifier: MBCTextFormCell.reuseIdentifier)
+        signUpTableView.register(MBCDoubleTextFormCell.self, forCellReuseIdentifier: MBCDoubleTextFormCell.reuseIdentifier)
     }
     
     private func bind() {
@@ -127,48 +128,28 @@ extension SignUpViewController {
         let formItem = viewModel.form[indexPath.row]
         
         switch formItem {
-        case .name:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: SUMinorTableViewCell.reuseIdentifier, for: indexPath) as? SUMinorTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.tag = indexPath.row
             
-            if cell.tag == indexPath.row {
-                cell.cNameTextField.rx.text.compactMap { $0 }
-                    .observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell] text in
-                        guard let cell = cell else { return }
-                        if text != "" {
-                            text.validate(by: .name)
-                            ? cell.showNameError(false) : cell.showNameError(true)
-                        }
-                    }).disposed(by: disposeBag)
-                
-                cell.cNameTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userFirstName).disposed(by: disposeBag)
-                
-                cell.cLastNameTextField.rx.text.compactMap { $0 }
-                    .observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell] text in
-                        guard let cell = cell else { return }
-                        if text != "" {
-                            text.validate(by: .name)
-                            ? cell.showLastNameError(false) : cell.showLastNameError(true)
-                        }
-                    }).disposed(by: disposeBag)
-                
-                cell.cLastNameTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userLastName).disposed(by: disposeBag)
-            }
+        case .name:
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCDoubleTextFormCell.reuseIdentifier, for: indexPath) as? MBCDoubleTextFormCell ?? MBCDoubleTextFormCell()
+            
+            cell.configure(left: .name, right: .lastName)
+            
+            cell.leftTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userFirstName).disposed(by: disposeBag)
+            cell.rightTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userLastName).disposed(by: disposeBag)
+            
             return cell
             
         case .email:
-            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCTextFormCell.reuseIdentifier, for: indexPath) as? MBCTextFormCell ?? MBCTextFormCell()
             
             cell.configure(as: formItem)
             
             cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.userEmail).disposed(by: disposeBag)
             
-            
             return cell
+            
         case .loginEmail:
-            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCTextFormCell.reuseIdentifier, for: indexPath) as? MBCTextFormCell ?? MBCTextFormCell()
             
             cell.configure(as: formItem)
             
@@ -177,12 +158,13 @@ extension SignUpViewController {
             return cell
             
         case .password:
-            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCTextFormCell.reuseIdentifier, for: indexPath) as? MBCTextFormCell ?? MBCTextFormCell()
             
             cell.configure(as: formItem)
             
             cell.textField.rightView?.rx.tapGesture()
                 .when(.recognized)
+                .observe(on: MainScheduler.instance)
                 .subscribe(onNext: { _ in
                     if let bttn = cell.textField.rightView as? UIButton {
                         cell.textField.isSecureTextEntry.toggle()
@@ -193,16 +175,18 @@ extension SignUpViewController {
                     }
                 }).disposed(by: disposeBag)
             
-            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.loginPassword).disposed(by: disposeBag)
+            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.userPassword).disposed(by: disposeBag)
             
             return cell
+            
         case .confirm:
-            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCTextFormCell.reuseIdentifier, for: indexPath) as? MBCTextFormCell ?? MBCTextFormCell()
             
             cell.configure(as: formItem)
             
             cell.textField.rightView?.rx.tapGesture()
                 .when(.recognized)
+                .observe(on: MainScheduler.instance)
                 .subscribe(onNext: { _ in
                     if let bttn = cell.textField.rightView as? UIButton {
                         cell.textField.isSecureTextEntry.toggle()
@@ -218,34 +202,42 @@ extension SignUpViewController {
             return cell
 
         case .birthday:
-            let cell = tableView.dequeueReusableCell(withIdentifier: SignUpTableViewCell.reuseIdentifier, for: indexPath) as? SignUpTableViewCell ?? SignUpTableViewCell()
-            cell.style = .birthday
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCTextFormCell.reuseIdentifier, for: indexPath) as? MBCTextFormCell ?? MBCTextFormCell()
             
-            cell.signUpCellTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userBirthday).disposed(by: disposeBag)
+            cell.configure(as: formItem)
+            
+            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.userBirthday).disposed(by: disposeBag)
             
             return cell
+            
         case .gender:
-            let cell = tableView.dequeueReusableCell(withIdentifier: SignUpTableViewCell.reuseIdentifier, for: indexPath) as? SignUpTableViewCell ?? SignUpTableViewCell()
-            cell.style = .gender
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCTextFormCell.reuseIdentifier, for: indexPath) as? MBCTextFormCell ?? MBCTextFormCell()
             
-            cell.signUpCellTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userGender).disposed(by: disposeBag)
+            cell.configure(as: formItem)
+            
+            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.userGender).disposed(by: disposeBag)
             
             return cell
+            
         case .country:
-            let cell = tableView.dequeueReusableCell(withIdentifier: SignUpTableViewCell.reuseIdentifier, for: indexPath) as? SignUpTableViewCell ?? SignUpTableViewCell()
-            cell.style = .country
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCTextFormCell.reuseIdentifier, for: indexPath) as? MBCTextFormCell ?? MBCTextFormCell()
             
-            cell.signUpCellButton.rx.tap.observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell, weak self] in
-                guard let cell = cell, let self = self else { return }
-                cell.cpv.showCountriesList(from: self)
-            }).disposed(by: disposeBag)
+            cell.configure(as: formItem)
             
-            cell.signUpCellTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userCountry).disposed(by: disposeBag)
+            cell.textField.rx.tapGesture()
+                .when(.recognized)
+                .observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [weak cell, weak self] _ in
+                    guard let cell = cell, let self = self else { return }
+                    cell.cpv.showCountriesList(from: self)
+                }).disposed(by: disposeBag)
+
+            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.userCountry).disposed(by: disposeBag)
             
             return cell
             
         case .loginPassword:
-            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCTextFormCell.reuseIdentifier, for: indexPath) as? MBCTextFormCell ?? MBCTextFormCell()
             
             cell.configure(as: formItem)
             
@@ -267,6 +259,7 @@ extension SignUpViewController {
             cell.bigSignUpButton.rx.tap.observe(on: MainScheduler.instance).subscribe(onNext: { [weak self] in
                 self?.viewModel.loginButtonTapped()
             }).disposed(by: disposeBag)
+            
             return cell
             
         case .privacyAndTerms:
@@ -284,6 +277,7 @@ extension SignUpViewController {
                     guard let self = self else { return }
                     self.viewModel.privacyPolicyTapped()
                 }).disposed(by: disposeBag)
+            
             return cell
             
         case .termsCheck:
@@ -316,26 +310,27 @@ extension SignUpViewController {
                 }).disposed(by: disposeBag)
             
             return cell
+            
         case .signUp:
             let cell = tableView.dequeueReusableCell(withIdentifier: SignUpTableViewCell.reuseIdentifier, for: indexPath) as? SignUpTableViewCell ?? SignUpTableViewCell()
-            cell.tag = indexPath.row
-            if cell.tag == indexPath.row {
-                cell.style = .signUp
-                
-                viewModel.isValid()
-                    .bind(to: cell.bigSignUpButton.rx.isEnabled)
-                    .disposed(by: disposeBag)
-                viewModel.isValid()
-                    .map { $0 ? 1 : 0.5 }
-                    .bind(to: cell.bigSignUpButton.rx.alpha)
-                    .disposed(by: disposeBag)
-                cell.bigSignUpButton.rx.tap.observe(on: MainScheduler.instance).subscribe(onNext: { [weak self] in
-                    // TODO: implement sign up button pressed logic
-                    UserSession.shared.currentUser = self?.viewModel.getUser()
-                    self?.viewModel.bigSignUpButtonTapped()
-                }).disposed(by: disposeBag)
-            }
+            
+            cell.style = .signUp
+            
+            viewModel.isValid()
+                .bind(to: cell.bigSignUpButton.rx.isEnabled)
+                .disposed(by: disposeBag)
+            viewModel.isValid()
+                .map { $0 ? 1 : 0.5 }
+                .bind(to: cell.bigSignUpButton.rx.alpha)
+                .disposed(by: disposeBag)
+            cell.bigSignUpButton.rx.tap.observe(on: MainScheduler.instance).subscribe(onNext: { [weak self] in
+                // TODO: implement sign up button pressed logic
+                UserSession.shared.currentUser = self?.viewModel.getUser()
+                self?.viewModel.bigSignUpButtonTapped()
+            }).disposed(by: disposeBag)
+            
             return cell
+            
         default:
             return UITableViewCell()
         }

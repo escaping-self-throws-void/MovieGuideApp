@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RxSwift
 
 final class MBCTextField: UITextField {
     
@@ -84,6 +83,12 @@ final class MBCTextField: UITextField {
         }
     }
     
+    private var regex: RegexType? {
+        didSet {
+            addTarget(self, action: #selector(validateText), for: .editingChanged)
+        }
+    }
+    
     private let padding: CGFloat = 7
     
     // MARK: - Super methods
@@ -144,17 +149,7 @@ final class MBCTextField: UITextField {
         textContentType = form.keyboardContent
         addAccessoryView(form.accessoryButton)
         isSecureTextEntry = form.isSecure
-    }
-    
-    func validate(text: String, as regex: RegexType?) {
-        guard let regex = regex, !text.isEmpty else { return }
-        let isValid = text.validate(by: regex)
-        let color = isValid ? UIColor(named: C.Colors.brownishGreyTwo)
-                            : UIColor(named: C.Colors.dustyRed)
-        errorLabel.isHidden = isValid
-        errorLabel.text = regex.errorMessage
-        borderLayer.strokeColor = color.unwrap.cgColor
-        floatingLabel.textColor = color
+        regex = form.regex
     }
     
     // MARK: - Private methods
@@ -230,6 +225,17 @@ final class MBCTextField: UITextField {
         if isUp && text.isEmptyOrNil {
             isUp.toggle()
         }
+    }
+    
+    @objc private func validateText() {
+        guard let regex, let text, !text.isEmpty else { return }
+        let isValid = text.validate(by: regex)
+        let color = isValid ? UIColor(named: C.Colors.brownishGreyTwo)
+                            : UIColor(named: C.Colors.dustyRed)
+        errorLabel.isHidden = isValid
+        errorLabel.text = regex.errorMessage
+        borderLayer.strokeColor = color.unwrap.cgColor
+        floatingLabel.textColor = color
     }
      
 }

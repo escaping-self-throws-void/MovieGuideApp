@@ -76,8 +76,8 @@ final class SignUpViewModel: SignUpViewModelProtocol {
     func isValid() -> Observable<Bool> {
         return Observable.combineLatest(userFirstName, userLastName, userEmail, userPassword, userConfirmPassword, userTermsAccepted)
             .map { firstName, lastName, email, password, confirm, terms in
-                (firstName.validate(by: .name) &&
-                 lastName.validate(by: .name) &&
+                (firstName.validate(by: .firstName) &&
+                 lastName.validate(by: .lastName) &&
                  email.validate(by: .email) &&
                  password.validate(by: .password) && terms) && (confirm == password)
             }

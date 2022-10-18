@@ -34,7 +34,7 @@
 		CF227BEF28CE553C00DB8E9F /* timeline16.json in Resources */ = {isa = PBXBuildFile; fileRef = CF227BEE28CE553C00DB8E9F /* timeline16.json */; };
 		CF227BF728CE567D00DB8E9F /* timeline17.json in Resources */ = {isa = PBXBuildFile; fileRef = CF227BF628CE567D00DB8E9F /* timeline17.json */; };
 		CF227BF928CE569500DB8E9F /* timeline18.json in Resources */ = {isa = PBXBuildFile; fileRef = CF227BF828CE569500DB8E9F /* timeline18.json */; };
-		CF2F9C2428F01CD30088AB0F /* MBCFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F9C2328F01CD30088AB0F /* MBCFormCell.swift */; };
+		CF2F9C2428F01CD30088AB0F /* MBCTextFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F9C2328F01CD30088AB0F /* MBCTextFormCell.swift */; };
 		CF2F9C2628F01F290088AB0F /* MBCDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F9C2528F01F290088AB0F /* MBCDatePicker.swift */; };
 		CF2F9C2928F0252B0088AB0F /* MGLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F9C2828F0252A0088AB0F /* MGLayout.swift */; };
 		CF2F9C2B28F029B00088AB0F /* MBCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2F9C2A28F029B00088AB0F /* MBCTextField.swift */; };
@@ -127,6 +127,8 @@
 		CFF39ADA2883169300A7D428 /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFF39AD82883169300A7D428 /* PopUpViewController.xib */; };
 		CFF9F2932886EAEF00DDE552 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9F2922886EAEF00DDE552 /* SideMenuViewModel.swift */; };
 		CFF9F2B02886F8A700DDE552 /* SideMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF9F2A92886F8A700DDE552 /* SideMenuViewController.storyboard */; };
+		CFFBFA2E28FF0C4B000D08A2 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFBFA2D28FF0C4B000D08A2 /* UITableViewCell+Extensions.swift */; };
+		CFFBFA3028FF0D58000D08A2 /* MBCDoubleTextFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFBFA2F28FF0D58000D08A2 /* MBCDoubleTextFormCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,7 +161,7 @@
 		CF227BEE28CE553C00DB8E9F /* timeline16.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline16.json; sourceTree = "<group>"; };
 		CF227BF628CE567D00DB8E9F /* timeline17.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline17.json; sourceTree = "<group>"; };
 		CF227BF828CE569500DB8E9F /* timeline18.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = timeline18.json; sourceTree = "<group>"; };
-		CF2F9C2328F01CD30088AB0F /* MBCFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCFormCell.swift; sourceTree = "<group>"; };
+		CF2F9C2328F01CD30088AB0F /* MBCTextFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCTextFormCell.swift; sourceTree = "<group>"; };
 		CF2F9C2528F01F290088AB0F /* MBCDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCDatePicker.swift; sourceTree = "<group>"; };
 		CF2F9C2828F0252A0088AB0F /* MGLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGLayout.swift; sourceTree = "<group>"; };
 		CF2F9C2A28F029B00088AB0F /* MBCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCTextField.swift; sourceTree = "<group>"; };
@@ -254,6 +256,8 @@
 		CFF39AD82883169300A7D428 /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 		CFF9F2922886EAEF00DDE552 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		CFF9F2A92886F8A700DDE552 /* SideMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenuViewController.storyboard; sourceTree = "<group>"; };
+		CFFBFA2D28FF0C4B000D08A2 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		CFFBFA2F28FF0D58000D08A2 /* MBCDoubleTextFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCDoubleTextFormCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,7 +484,8 @@
 				CFA61A3F288C628B00ACB756 /* MBCSegmentedControl.swift */,
 				CF2F9C2528F01F290088AB0F /* MBCDatePicker.swift */,
 				CF2F9C2A28F029B00088AB0F /* MBCTextField.swift */,
-				CF2F9C2328F01CD30088AB0F /* MBCFormCell.swift */,
+				CF2F9C2328F01CD30088AB0F /* MBCTextFormCell.swift */,
+				CFFBFA2F28FF0D58000D08A2 /* MBCDoubleTextFormCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -911,6 +916,7 @@
 				CFA61A41288C639200ACB756 /* UIImage+Extensions.swift */,
 				CFD51CD9288D7C2E00F14A03 /* NSTextAlignment+Extensions.swift */,
 				CF2F9C2C28F04B540088AB0F /* Optional+Extensions.swift */,
+				CFFBFA2D28FF0C4B000D08A2 /* UITableViewCell+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1178,7 +1184,7 @@
 				CFA61A42288C639200ACB756 /* UIImage+Extensions.swift in Sources */,
 				CF0B308E287EB32200C093BA /* NetworkService.swift in Sources */,
 				CF0B307C287E9E5D00C093BA /* TimelineViewModel.swift in Sources */,
-				CF2F9C2428F01CD30088AB0F /* MBCFormCell.swift in Sources */,
+				CF2F9C2428F01CD30088AB0F /* MBCTextFormCell.swift in Sources */,
 				CFA7AA0528789B62001434F5 /* SUMinorTableViewCell.swift in Sources */,
 				CFC8E96828774F7D006E33E6 /* AppCoordinator.swift in Sources */,
 				CFA61A35288BE4F200ACB756 /* SettingsViewController.swift in Sources */,
@@ -1189,6 +1195,7 @@
 				CFC7E2292889D9A400958AFC /* GenresCollectionViewCell.swift in Sources */,
 				CFF39AD2288165EF00A7D428 /* SectionHeaderReusableView.swift in Sources */,
 				CF8DD0CB2887E02D00A5ECFE /* MovieDetailsCoordinator.swift in Sources */,
+				CFFBFA3028FF0D58000D08A2 /* MBCDoubleTextFormCell.swift in Sources */,
 				CF94F9DC28802F1200FFF16A /* MBCCollectionView.swift in Sources */,
 				CF2F9C2D28F04B540088AB0F /* Optional+Extensions.swift in Sources */,
 				CF601E262884026C00AA7E80 /* LanguageService.swift in Sources */,
@@ -1225,6 +1232,7 @@
 				CFA61A1F288A80A300ACB756 /* ReminderMenuCoordinator.swift in Sources */,
 				CFC8E97328776A94006E33E6 /* UIViewController+Extensions.swift in Sources */,
 				CFD51CDA288D7C2E00F14A03 /* NSTextAlignment+Extensions.swift in Sources */,
+				CFFBFA2E28FF0C4B000D08A2 /* UITableViewCell+Extensions.swift in Sources */,
 				CFA7A9F02878049D001434F5 /* SignUpCoordinator.swift in Sources */,
 				CFF39AD62881F93E00A7D428 /* UIView+Extensions.swift in Sources */,
 				CF2F9C2628F01F290088AB0F /* MBCDatePicker.swift in Sources */,

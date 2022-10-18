@@ -49,13 +49,15 @@ enum FormType {
     var regex: RegexType? {
         switch self {
         case .name:
-            return .name
+            return .firstName
         case .lastName:
             return .lastName
         case .email, .loginEmail:
             return .email
-        case .password, .loginPassword:
+        case .password:
             return .password
+        case .loginPassword:
+            return .passwordLogin
         case .confirm:
             return .confirm
         default:
@@ -66,7 +68,7 @@ enum FormType {
     var keyboard: UIKeyboardType {
         switch self {
         case .name, .lastName:
-            return .namePhonePad
+            return .alphabet
         case .email, .loginEmail:
             return .emailAddress
         case .password, .confirm:
@@ -100,23 +102,20 @@ enum FormType {
         }
     }
     
-    var accessoryButton: UIView? {
+    var accessoryButton: UIButton? {
         switch self {
         case .password, .confirm:
-            return createPasswordButton()
-//        case .birthday:
-//            <#code#>
-//        case .gender:
-//            <#code#>
-//        case .country:
-//            <#code#>
+            return createButtonWithImage(named: C.Images.eyeClosed)
+        case .birthday:
+            return createButtonWithImage(named: C.Images.calendar)
+        case .gender, .country:
+            return createButtonWithImage(named: C.Images.disclosure)
         case .loginPassword:
             return createLoginPasswordButton()
         default:
             return nil
         }
     }
-    
     
 }
 
@@ -129,10 +128,10 @@ private extension FormType {
         return button
     }
     
-    private func createPasswordButton() -> UIButton? {
+    private func createButtonWithImage(named: String) -> UIButton? {
+        guard let image = UIImage(named: named) else { return nil }
         let button = UIButton(type: .custom)
-        button.setImage(UIImage(named: C.Images.eyeClosed),
-                        for: .normal)
+        button.setImage(image, for: .normal)
         return button
     }
 }
