@@ -13,9 +13,8 @@ final class SignUpCoordinator: BaseCoordinator {
     private let viewController = SignUpViewController.instantiate()
     
     override func start() {
-        let viewModel = SignUpViewModel()
+        let viewModel = SignUpViewModel(isLogin: isLogin)
         viewModel.coordinator = self
-        viewModel.isLogin = isLogin
         viewController.viewModel = viewModel
         viewController.isModalInPresentation = false
 //        if let sheet = viewController.sheetPresentationController {

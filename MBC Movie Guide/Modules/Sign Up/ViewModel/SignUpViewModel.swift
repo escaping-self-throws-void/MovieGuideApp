@@ -9,9 +9,9 @@ import Foundation
 import RxSwift
 
 protocol SignUpViewModelProtocol: AnyObject {
-    var isLogin: Bool { get }
     var termsAccepted: Bool { get set }
     var adsAccepted: Bool { get set }
+    var form: [FormType] { get set }
     
     var userFirstName: BehaviorSubject<String> { get set }
     var userLastName: BehaviorSubject<String> { get set }
@@ -39,8 +39,8 @@ protocol SignUpViewModelProtocol: AnyObject {
 }
 
 final class SignUpViewModel: SignUpViewModelProtocol {
-    var isLogin = false
-    
+    var form: [FormType] = []
+        
     var termsAccepted = false {
         didSet {
             userTermsAccepted.onNext(termsAccepted)
@@ -68,6 +68,10 @@ final class SignUpViewModel: SignUpViewModelProtocol {
     
     var loginEmail = BehaviorSubject<String>(value: "")
     var loginPassword = BehaviorSubject<String>(value: "")
+    
+    init(isLogin: Bool) {
+        buildForm(isLogin)
+    }
     
     func isValid() -> Observable<Bool> {
         return Observable.combineLatest(userFirstName, userLastName, userEmail, userPassword, userConfirmPassword, userTermsAccepted)
@@ -122,3 +126,24 @@ final class SignUpViewModel: SignUpViewModelProtocol {
 
 }
 
+extension SignUpViewModel {
+    private func buildForm(_ isLogin: Bool) {
+        form = isLogin ? [
+            .loginEmail,
+            .loginPassword,
+            .privacyAndTerms,
+            .login
+        ] : [
+            .name,
+            .email,
+            .password,
+            .confirm,
+            .birthday,
+            .gender,
+            .country,
+            .termsCheck,
+            .signUp
+        ]
+    }
+
+}

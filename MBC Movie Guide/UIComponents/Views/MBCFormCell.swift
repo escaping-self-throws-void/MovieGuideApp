@@ -42,16 +42,13 @@ final class MBCFormCell: UITableViewCell {
 
 extension MBCFormCell {
     func configure(as type: FormType) {
-        textField.configure(
-            placeholder: type.placeholder
-        )
+        textField.configure(with: type)
 
-        textField.addAccessoryView(type.accessoryButton)
         textField.rx.text
             .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
             .compactMap { $0 }
             .subscribe(onNext: { [weak self] text in
-                guard let self else { return }
+                guard let self = self else { return }
                 self.textField.validate(text: text, as: type.regex)
             }).disposed(by: disposeBag)
         

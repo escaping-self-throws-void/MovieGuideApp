@@ -109,13 +109,11 @@ final class SignUpViewController: UIViewController {
 extension SignUpViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.isLogin ? 4 : 9
+        viewModel.form.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        viewModel.isLogin
-        ? showLogInCells(tableView, indexPath: indexPath)
-        : showSignUpCells(tableView, indexPath: indexPath)
+        buildForm(tableView, indexPath: indexPath)
     }
     
 }
@@ -124,13 +122,12 @@ extension SignUpViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension SignUpViewController {
     
-    private func showSignUpCells(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SignUpTableViewCell.reuseIdentifier, for: indexPath) as? SignUpTableViewCell else {
-            return UITableViewCell()
-        }
+    private func buildForm(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         
-        switch indexPath.row {
-        case 0:
+        let formItem = viewModel.form[indexPath.row]
+        
+        switch formItem {
+        case .name:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SUMinorTableViewCell.reuseIdentifier, for: indexPath) as? SUMinorTableViewCell else {
                 return UITableViewCell()
             }
@@ -160,85 +157,82 @@ extension SignUpViewController {
                 cell.cLastNameTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userLastName).disposed(by: disposeBag)
             }
             return cell
-        case 1:
-            cell.style = .email
-            cell.signUpCellTextField.rx.text.compactMap { $0 }
-                .observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell] text in
-                    guard let cell = cell else { return }
-                    if text != "" {
-                        text.validate(by: .email)
-                        ? cell.showError(false) : cell.showError(true)
+            
+        case .email:
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
+            
+            cell.configure(as: formItem)
+            
+            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.userEmail).disposed(by: disposeBag)
+            
+            
+            return cell
+        case .loginEmail:
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
+            
+            cell.configure(as: formItem)
+            
+            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.loginEmail).disposed(by: disposeBag)
+            
+            return cell
+            
+        case .password:
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
+            
+            cell.configure(as: formItem)
+            
+            cell.textField.rightView?.rx.tapGesture()
+                .when(.recognized)
+                .subscribe(onNext: { _ in
+                    if let bttn = cell.textField.rightView as? UIButton {
+                        cell.textField.isSecureTextEntry.toggle()
+                        bttn.setImage(cell.textField.isSecureTextEntry
+                                      ? UIImage(named: C.Images.eyeClosed)
+                                      : UIImage(named: C.Images.eyeOpened ),
+                                      for: .normal)
                     }
                 }).disposed(by: disposeBag)
             
-            cell.signUpCellTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userEmail).disposed(by: disposeBag)
+            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.loginPassword).disposed(by: disposeBag)
             
             return cell
-        case 2:
-            cell.style = .password
-            cell.signUpCellButton.rx.tap
-                .observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell] in
-                    guard let cell = cell else { return }
-                    cell.isSecure.toggle()
-                    cell.signUpCellButton.setImage(cell.isSecure
-                                                    ? UIImage(named: C.Images.eyeClosed)
-                                                    : UIImage(named: C.Images.eyeOpened ),
-                                                    for: .normal)
-                    cell.signUpCellTextField.isSecureTextEntry = cell.isSecure
-                }).disposed(by: disposeBag)
+        case .confirm:
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
             
-            cell.signUpCellTextField.rx.text
-                .throttle(.milliseconds(300), scheduler: MainScheduler.instance)
-                .compactMap { $0 }
-                .observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell] text in
-                    guard let cell = cell else { return }
-                    if text != "" {
-                        text.validate(by: .password)
-                        ? cell.showError(false) : cell.showError(true)
+            cell.configure(as: formItem)
+            
+            cell.textField.rightView?.rx.tapGesture()
+                .when(.recognized)
+                .subscribe(onNext: { _ in
+                    if let bttn = cell.textField.rightView as? UIButton {
+                        cell.textField.isSecureTextEntry.toggle()
+                        bttn.setImage(cell.textField.isSecureTextEntry
+                                      ? UIImage(named: C.Images.eyeClosed)
+                                      : UIImage(named: C.Images.eyeOpened ),
+                                      for: .normal)
                     }
                 }).disposed(by: disposeBag)
             
-            cell.signUpCellTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userPassword).disposed(by: disposeBag)
+            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.userConfirmPassword).disposed(by: disposeBag)
             
             return cell
-        case 3:
-            cell.style = .confirm
-            cell.signUpCellButton.rx.tap
-                .observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell] in
-                    guard let cell = cell else { return }
-                    cell.isSecure.toggle()
-                    cell.signUpCellButton.setImage(cell.isSecure
-                                                    ? UIImage(named: C.Images.eyeClosed)
-                                                    : UIImage(named: C.Images.eyeOpened ),
-                                                    for: .normal)
-                    cell.signUpCellTextField.isSecureTextEntry = cell.isSecure
-                }).disposed(by: disposeBag)
-            
-            cell.signUpCellTextField.rx.text.compactMap { $0 }
-                .observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell] text in
-                    guard let cell = cell else { return }
-                    if text != "" {
-                        text.validate(by: .password)
-                        ? cell.showError(false) : cell.showError(true)
-                    }
-                }).disposed(by: disposeBag)
-            
-            cell.signUpCellTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userConfirmPassword).disposed(by: disposeBag)
-            
-            return cell
-        case 4:
+
+        case .birthday:
+            let cell = tableView.dequeueReusableCell(withIdentifier: SignUpTableViewCell.reuseIdentifier, for: indexPath) as? SignUpTableViewCell ?? SignUpTableViewCell()
             cell.style = .birthday
             
             cell.signUpCellTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userBirthday).disposed(by: disposeBag)
             
             return cell
-        case 5:
+        case .gender:
+            let cell = tableView.dequeueReusableCell(withIdentifier: SignUpTableViewCell.reuseIdentifier, for: indexPath) as? SignUpTableViewCell ?? SignUpTableViewCell()
             cell.style = .gender
             
             cell.signUpCellTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userGender).disposed(by: disposeBag)
             
             return cell
-        case 6:
+        case .country:
+            let cell = tableView.dequeueReusableCell(withIdentifier: SignUpTableViewCell.reuseIdentifier, for: indexPath) as? SignUpTableViewCell ?? SignUpTableViewCell()
             cell.style = .country
             
             cell.signUpCellButton.rx.tap.observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell, weak self] in
@@ -249,13 +243,54 @@ extension SignUpViewController {
             cell.signUpCellTextField.rx.text.compactMap { $0 }.bind(to: viewModel.userCountry).disposed(by: disposeBag)
             
             return cell
-        case 7:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: SUMinorTableViewCell.reuseIdentifier, for: indexPath) as? SUMinorTableViewCell else {
-                return UITableViewCell()
-            }
+            
+        case .loginPassword:
+            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
+            
+            cell.configure(as: formItem)
+            
+            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.loginPassword).disposed(by: disposeBag)
+            
+            return cell
+            
+        case .login:
+            let cell = tableView.dequeueReusableCell(withIdentifier: SignUpTableViewCell.reuseIdentifier, for: indexPath) as? SignUpTableViewCell ?? SignUpTableViewCell()
+            cell.style = .logIn
+            
+            viewModel.isLoginValid()
+                .bind(to: cell.bigSignUpButton.rx.isEnabled)
+                .disposed(by: disposeBag)
+            viewModel.isLoginValid()
+                .map { $0 ? 1 : 0.5 }
+                .bind(to: cell.bigSignUpButton.rx.alpha)
+                .disposed(by: disposeBag)
+            cell.bigSignUpButton.rx.tap.observe(on: MainScheduler.instance).subscribe(onNext: { [weak self] in
+                self?.viewModel.loginButtonTapped()
+            }).disposed(by: disposeBag)
+            return cell
+            
+        case .privacyAndTerms:
+            let cell = tableView.dequeueReusableCell(withIdentifier: SUMinorTableViewCell.reuseIdentifier, for: indexPath) as? SUMinorTableViewCell ?? SUMinorTableViewCell()
+            cell.style = .privacyAndTerms
+            
+            cell.termsAndConditionsButton.rx.tap.observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [weak self] in
+                    guard let self = self else { return }
+                    self.viewModel.acceptTermsTapped()
+                }).disposed(by: disposeBag)
+            
+            cell.privacyPolicyButton.rx.tap.observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [weak self] in
+                    guard let self = self else { return }
+                    self.viewModel.privacyPolicyTapped()
+                }).disposed(by: disposeBag)
+            return cell
+            
+        case .termsCheck:
+            let cell = tableView.dequeueReusableCell(withIdentifier: SUMinorTableViewCell.reuseIdentifier, for: indexPath) as? SUMinorTableViewCell ?? SUMinorTableViewCell()
             
             cell.style = .termsCheck
-
+            
             cell.termsCheck.rx.tap.observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell, weak self] in
                 guard let cell = cell, let self = self else { return }
                 self.viewModel.termsAccepted.toggle()
@@ -264,7 +299,7 @@ extension SignUpViewController {
                     .bind(to: cell.termsCheck.rx.image())
                     .disposed(by: self.disposeBag)
             }).disposed(by: disposeBag)
-
+            
             cell.adsCheck.rx.tap.observe(on: MainScheduler.instance).subscribe(onNext: { [weak cell, weak self] in
                 guard let cell = cell, let self = self else { return }
                 self.viewModel.adsAccepted.toggle()
@@ -273,7 +308,7 @@ extension SignUpViewController {
                     .bind(to: cell.adsCheck.rx.image())
                     .disposed(by: self.disposeBag)
             }).disposed(by: disposeBag)
-
+            
             cell.acceptTermsButton.rx.tap.observe(on: MainScheduler.instance)
                 .subscribe(onNext: { [weak self] in
                     guard let self = self else { return }
@@ -281,7 +316,8 @@ extension SignUpViewController {
                 }).disposed(by: disposeBag)
             
             return cell
-        default:
+        case .signUp:
+            let cell = tableView.dequeueReusableCell(withIdentifier: SignUpTableViewCell.reuseIdentifier, for: indexPath) as? SignUpTableViewCell ?? SignUpTableViewCell()
             cell.tag = indexPath.row
             if cell.tag == indexPath.row {
                 cell.style = .signUp
@@ -300,64 +336,8 @@ extension SignUpViewController {
                 }).disposed(by: disposeBag)
             }
             return cell
-        }
-    }
-    
-    private func showLogInCells(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SignUpTableViewCell.reuseIdentifier, for: indexPath) as? SignUpTableViewCell else { return UITableViewCell() }
-        
-        switch indexPath.row {
-        case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
-            
-            cell.configure(as: .email)
-            
-            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.loginEmail).disposed(by: disposeBag)
-            
-            return cell
-        case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: MBCFormCell.reuseIdentifier, for: indexPath) as? MBCFormCell ?? MBCFormCell()
-            
-            cell.configure(as: .loginPassword)
-            cell.textField.rightView?.rx
-                .tapGesture()
-                .when(.recognized)
-                .subscribe(onNext: { [weak self] _ in
-                    print("Das")
-                })
-            cell.textField.rx.text.compactMap { $0 }.bind(to: viewModel.loginPassword).disposed(by: disposeBag)
-
-            return cell
-        case 2:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: SUMinorTableViewCell.reuseIdentifier, for: indexPath) as? SUMinorTableViewCell else { return UITableViewCell() }
-            cell.style = .privacyAndTerms
-            
-            cell.termsAndConditionsButton.rx.tap.observe(on: MainScheduler.instance)
-                .subscribe(onNext: { [weak self] in
-                    guard let self = self else { return }
-                    self.viewModel.acceptTermsTapped()
-                }).disposed(by: disposeBag)
-            
-            cell.privacyPolicyButton.rx.tap.observe(on: MainScheduler.instance)
-                .subscribe(onNext: { [weak self] in
-                    guard let self = self else { return }
-                    self.viewModel.privacyPolicyTapped()
-                }).disposed(by: disposeBag)
-            return cell
         default:
-            cell.style = .logIn
-            
-            viewModel.isLoginValid()
-                .bind(to: cell.bigSignUpButton.rx.isEnabled)
-                .disposed(by: disposeBag)
-            viewModel.isLoginValid()
-                .map { $0 ? 1 : 0.5 }
-                .bind(to: cell.bigSignUpButton.rx.alpha)
-                .disposed(by: disposeBag)
-            cell.bigSignUpButton.rx.tap.observe(on: MainScheduler.instance).subscribe(onNext: { [weak self] in
-                self?.viewModel.loginButtonTapped()
-            }).disposed(by: disposeBag)
-            return cell
+            return UITableViewCell()
         }
     }
 }

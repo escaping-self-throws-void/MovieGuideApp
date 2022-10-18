@@ -138,12 +138,16 @@ final class MBCTextField: UITextField {
     
     // MARK: - Public methods
     
-    func configure(placeholder: String) {
-        floatingLabel.text = placeholder
+    func configure(with form: FormType) {
+        floatingLabel.text = form.placeholder
+        keyboardType = form.keyboard
+        textContentType = form.keyboardContent
+        addAccessoryView(form.accessoryButton)
+        isSecureTextEntry = form.isSecure
     }
     
     func validate(text: String, as regex: RegexType?) {
-        guard let regex, !text.isEmpty else { return }
+        guard let regex = regex, !text.isEmpty else { return }
         let isValid = text.validate(by: regex)
         let color = isValid ? UIColor(named: C.Colors.brownishGreyTwo)
                             : UIColor(named: C.Colors.dustyRed)
@@ -151,12 +155,6 @@ final class MBCTextField: UITextField {
         errorLabel.text = regex.errorMessage
         borderLayer.strokeColor = color.unwrap.cgColor
         floatingLabel.textColor = color
-    }
-    
-    // TODO: Finish implementation
-    func addAccessoryView(_ view: UIView?) {
-        rightView = view
-        rightViewMode = .always
     }
     
     // MARK: - Private methods
@@ -177,6 +175,12 @@ final class MBCTextField: UITextField {
             .bottom(to: self, padding: -12),
             .leading(to: self)
         )
+    }
+    
+    // TODO: Finish implementation
+    private func addAccessoryView(_ view: UIView?) {
+        rightView = view
+        rightViewMode = .always
     }
     
     private func bindFloatingLabel() {

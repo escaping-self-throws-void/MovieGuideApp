@@ -363,12 +363,12 @@
 			path = MovieDetails;
 			sourceTree = "<group>";
 		};
-		CF1BB23928FC1C370044F863 /* FormType */ = {
+		CF1BB23928FC1C370044F863 /* UIModel */ = {
 			isa = PBXGroup;
 			children = (
 				CF1BB23A28FC1C570044F863 /* FormType.swift */,
 			);
-			path = FormType;
+			path = UIModel;
 			sourceTree = "<group>";
 		};
 		CF2F9C2728F025000088AB0F /* AutoLayoutDSL */ = {
@@ -466,7 +466,6 @@
 		CF601E27288589B900AA7E80 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				CF1BB23928FC1C370044F863 /* FormType */,
 				CF2F9C2728F025000088AB0F /* AutoLayoutDSL */,
 				CF0B3082287EA87800C093BA /* Compositional Layout */,
 				CF601E28288589CC00AA7E80 /* Views */,
@@ -761,6 +760,7 @@
 		CFBFD7622876B45000D4BBBB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CF1BB23928FC1C370044F863 /* UIModel */,
 				CFBFD75F2876B43400D4BBBB /* SignUpViewModel.swift */,
 			);
 			path = ViewModel;

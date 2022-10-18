@@ -77,30 +77,16 @@ final class SignUpTableViewCell: UITableViewCell {
     private func setupStyle() {
         switch style {
         case .email:
-            signUpCellLabel.text = C.LocKeys.sUEmailCellLbl.localized()
-            signUpCellTextField.placeholder = C.LocKeys.sUEmailPlaceholder.localized()
-            errorCellLabel.text = C.LocKeys.sUEmailErrorLbl.localized()
+
             areHidden(signUpCellLabel, signUpCellTextField, on: false)
         case .password:
-            signUpCellLabel.text = C.LocKeys.sUPasswordCellLbl.localized()
-            signUpCellTextField.placeholder = C.LocKeys.sUPasswordPlaceholder.localized()
-            errorCellLabel.text = C.LocKeys.sUPasswordErrorLb.localized()
-            signUpCellButton.setImage(isSecure
-                                      ? UIImage(named: C.Images.eyeClosed)
-                                      : UIImage(named: C.Images.eyeOpened ),
-                                      for: .normal)
+
             signUpCellTextField.isSecureTextEntry = isSecure
-            areHidden(signUpCellLabel, signUpCellTextField, signUpCellButton, on: false)
+
         case .confirm:
-            signUpCellLabel.text = C.LocKeys.sUConfirmPassCellLbl.localized()
-            signUpCellTextField.placeholder = C.LocKeys.sUConfirmPlaceholder.localized()
-            errorCellLabel.text = C.LocKeys.sUConfirmErrorLbl.localized()
-            signUpCellButton.setImage(isSecure
-                                      ? UIImage(named: C.Images.eyeClosed)
-                                      : UIImage(named: C.Images.eyeOpened ),
-                                      for: .normal)
+ 
             signUpCellTextField.isSecureTextEntry = isSecure
-            areHidden(signUpCellLabel, signUpCellTextField, signUpCellButton, on: false)
+
         case .birthday:
             signUpCellTextField.placeholder = C.LocKeys.sUBirthdayPlaceholder.localized()
             signUpCellButton.setImage(UIImage(named: C.Images.calendar), for: .normal)
