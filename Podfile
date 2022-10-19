@@ -8,8 +8,9 @@ target 'MBC Movie Guide' do
   # Pods for MBC Movie Guide
 
     pod 'RxSwift'
-    pod 'RxCocoa'
+    pod 'RxCocoa', :inhibit_warnings => true
     pod "RxGesture"
+    pod 'IQKeyboardManagerSwift', :inhibit_warnings => true
     pod 'CountryPickerView', :inhibit_warnings => true
     pod 'SDWebImage'
 end

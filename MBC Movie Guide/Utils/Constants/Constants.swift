@@ -143,6 +143,7 @@ enum C {
     }
     
     enum Genders {
+        static let none = "Not selected"
         static let male = "Male"
         static let female = "Female"
     }

@@ -7,13 +7,14 @@
 
 import UIKit
 import CountryPickerView
+import IQKeyboardManagerSwift
 
 final class MBCTextFormCell: UITableViewCell {
     
     lazy var textField = MBCTextField()
     lazy var cpv = CountryPickerView()
-    
-    private lazy var genders = [C.Genders.male, C.Genders.female]
+
+    private lazy var genders = [C.Genders.none, C.Genders.male, C.Genders.female]
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -101,8 +102,13 @@ extension MBCTextFormCell: UIPickerViewDelegate, UIPickerViewDataSource  {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        guard row != 0 else {
+            textField.text = ""
+            return
+        }
         textField.text = genders[row]
     }
+
 }
 
 // MARK: - CountryPickerViewDelegate methods

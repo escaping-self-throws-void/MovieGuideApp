@@ -1,5 +1,6 @@
 PODS:
   - CountryPickerView (3.3.0)
+  - IQKeyboardManagerSwift (6.5.10)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -15,6 +16,7 @@ PODS:
 
 DEPENDENCIES:
   - CountryPickerView
+  - IQKeyboardManagerSwift
   - RxCocoa
   - RxGesture
   - RxSwift
@@ -23,6 +25,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - CountryPickerView
+    - IQKeyboardManagerSwift
     - RxCocoa
     - RxGesture
     - RxRelay
@@ -31,12 +34,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   CountryPickerView: 6322ada32a80b0cd721b0267282a5c24f406f263
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxGesture: f3efb47ed2d26a8082f7b660d4a59970e275a7f8
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SDWebImage: e5cc87bf736e60f49592f307bdf9e157189298a3
 
-PODFILE CHECKSUM: 7fd54513c8dbbbfb68e66a712b85a4dbde982c01
+PODFILE CHECKSUM: 9375c5ff8c70565ac988cebfe9146263aade2378
 
 COCOAPODS: 1.11.3

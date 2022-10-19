@@ -228,7 +228,7 @@ final class MBCTextField: UITextField {
     }
     
     @objc private func validateText() {
-        guard let regex, let text, !text.isEmpty else { return }
+        guard let regex = regex, let text = text, !text.isEmpty else { return }
         let isValid = text.validate(by: regex)
         let color = isValid ? UIColor(named: C.Colors.brownishGreyTwo)
                             : UIColor(named: C.Colors.dustyRed)
