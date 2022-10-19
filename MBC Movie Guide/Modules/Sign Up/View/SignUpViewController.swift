@@ -23,6 +23,7 @@ final class SignUpViewController: UIViewController {
         return bttn
     }()
     
+    private var dataSource: FormDataSource!
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -74,8 +75,6 @@ final class SignUpViewController: UIViewController {
     }
     
     private func setupTableView() {
-        signUpTableView.delegate = self
-        signUpTableView.dataSource = self
         let signUpNib = UINib(nibName: SignUpTableViewCell.reuseIdentifier, bundle: nil)
         signUpTableView.register(signUpNib, forCellReuseIdentifier: SignUpTableViewCell.reuseIdentifier)
         
@@ -83,6 +82,8 @@ final class SignUpViewController: UIViewController {
         signUpTableView.register(minorNib, forCellReuseIdentifier: SUMinorTableViewCell.reuseIdentifier)
         signUpTableView.register(MBCTextFormCell.self, forCellReuseIdentifier: MBCTextFormCell.reuseIdentifier)
         signUpTableView.register(MBCDoubleTextFormCell.self, forCellReuseIdentifier: MBCDoubleTextFormCell.reuseIdentifier)
+        configureDataSource()
+        createSnapshot(from: viewModel.form)
     }
     
     private func bind() {
@@ -105,28 +106,37 @@ final class SignUpViewController: UIViewController {
     }
 }
 
-// MARK: - TableView Delegate and DataSource methods
-
-extension SignUpViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.form.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        buildForm(tableView, indexPath: indexPath)
-    }
-    
-}
-
-// MARK: - Methods to populate TableView
+// MARK: - Diffable Data Source Setup
 
 extension SignUpViewController {
     
-    private func buildForm(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
-        
-        let formItem = viewModel.form[indexPath.row]
-        
+    fileprivate typealias FormDataSource = UITableViewDiffableDataSource<Section, FormType>
+    fileprivate typealias FormSnapshot = UITableViewDiffableDataSource<Section, FormType>
+
+    fileprivate enum Section {
+        case main
+    }
+    
+    private func configureDataSource() {
+        dataSource = FormSnapshot(tableView: signUpTableView) { [weak self] tableView, indexPath, formItem in
+            self?.buildForm(tableView, indexPath: indexPath, formItem: formItem)
+        }
+    }
+    
+    private func createSnapshot(from data: [FormType]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section,FormType>()
+        snapshot.appendSections([.main])
+        snapshot.reloadSections([.main])
+        snapshot.appendItems(data)
+        dataSource.apply(snapshot, animatingDifferences: false)
+    }
+}
+
+// MARK: - Build Form for TableView
+
+extension SignUpViewController {
+    private func buildForm(_ tableView: UITableView, indexPath: IndexPath, formItem: FormType) -> UITableViewCell {
+                
         switch formItem {
             
         case .name:

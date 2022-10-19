@@ -69,7 +69,7 @@ enum FormType {
         switch self {
         case .name, .lastName:
             return .alphabet
-        case .email, .loginEmail:
+        case .email, .loginEmail, .country:
             return .emailAddress
         case .password, .confirm:
             return .twitter

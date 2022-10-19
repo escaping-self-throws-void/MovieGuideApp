@@ -157,6 +157,7 @@ final class MBCTextField: UITextField {
     private func createUI() {
         backgroundColor = .clear
         textAlignment = .defaultAlignment
+        autocorrectionType = .no
         font = .init(name: C.Fonts.almaraiRegular, size: 15)
     }
     

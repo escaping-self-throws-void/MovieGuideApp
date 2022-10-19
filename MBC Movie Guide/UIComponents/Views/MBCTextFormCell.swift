@@ -7,7 +7,6 @@
 
 import UIKit
 import CountryPickerView
-import IQKeyboardManagerSwift
 
 final class MBCTextFormCell: UITableViewCell {
     
