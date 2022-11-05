@@ -111,20 +111,20 @@ final class SignUpViewController: UIViewController {
 extension SignUpViewController {
     
     fileprivate typealias FormDataSource = UITableViewDiffableDataSource<Section, FormType>
-    fileprivate typealias FormSnapshot = UITableViewDiffableDataSource<Section, FormType>
+    fileprivate typealias FormSnapshot = NSDiffableDataSourceSnapshot<Section, FormType>
 
     fileprivate enum Section {
         case main
     }
     
     private func configureDataSource() {
-        dataSource = FormSnapshot(tableView: signUpTableView) { [weak self] tableView, indexPath, formItem in
+        dataSource = FormDataSource(tableView: signUpTableView) { [weak self] tableView, indexPath, formItem in
             self?.buildForm(tableView, indexPath: indexPath, formItem: formItem)
         }
     }
     
     private func createSnapshot(from data: [FormType]) {
-        var snapshot = NSDiffableDataSourceSnapshot<Section,FormType>()
+        var snapshot = FormSnapshot()
         snapshot.appendSections([.main])
         snapshot.reloadSections([.main])
         snapshot.appendItems(data)
